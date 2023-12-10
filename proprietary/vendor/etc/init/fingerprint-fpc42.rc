@@ -1,0 +1,10 @@
+service fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint-service.fpc42
+    class hal
+    user system
+    group system input uhid
+    disabled
+
+
+on property:ro.vendor.trusty.storage.fs_ready=1
+    exec_background - system shell -- /vendor/bin/trusty_apploader /vendor/firmware/1540.app
+    enable fps_hal

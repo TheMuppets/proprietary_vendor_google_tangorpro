@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Google Kids Space Feature Flags -->
+<config>
+  <feature name="com.google.android.feature.KIDS_HOME_EXPERIENCE" />
+  <feature name="com.google.android.feature.KIDS_HOME_EXPERIENCE_KIDUSER" />
+</config>

@@ -1,0 +1,172 @@
+#
+# Tangorpro sensor device configuration registry script for black cover glass.
+#
+#
+# CDT Filter <CDT>:<mask>
+# CDT format: <0xPPPPSJIV> (P:Product, S:Stage, J:Major, I:Minor, V:Variant)
+# go/pixel-cdt-whi-pro
+#
+
+# Variant=0, white CG.
+# Variant=1, wingboard.
+# Variant=2, black CG.
+?+0x70002:0xFFFF0002
+
++/
+reg_script=tangorpro_black.reg
+
+#
+# Buses
+#
+
+# I2C
++/dev/i2c/0
+  bus_name=i2c0
+  bus_index=0
+
+# I3C
++/dev/i3c/2
+  bus_name=i3c2
+  bus_index=2
+
+# LSM6DSR.
++/dev/lsm6dsr/0
+  bus_name=i3c2
+  bus_freq_hz=400000
+  i3c_freq_hz=1230000
+  bus_addr=0x6a
+  i3c_addr=0xa
+  intr_id=47
+  trigger_type=2
+  fifo_enabled=1
+  md_threshold_m_per_s_sq=1.2264
+  md_window_ms=20
+  sd_window_ms=5000
+  fifo_max_odr=4000
+  fifo_max_wm=256
+  fifo_min_wm=1
+  gpio_id=gpio90
+
+# LSM6DSR accel.
++/dev/lsm6dsr/0/accel
+  orientation_transform=1 2 3
+  additional_orientation_transform=-2 1 3
+
+# LSM6DSR gyro.
++/dev/lsm6dsr/0/gyro
+  orientation_transform=1 2 3
+  additional_orientation_transform=-2 1 3
+
+# LSM6DSR temp.
++/dev/lsm6dsr/0/temp
+
+# Camera VSYNC.
++/dev/camera_vsync/0  # front
+  intr_id=58
+  intr_trigger_type=2
++/dev/camera_vsync/1  # rear
+  intr_id=59
+  intr_trigger_type=2
+
+# For MagCC
++/dev/magcc/0
+  battery_status=/sys/class/power_supply/battery/status
+  usb_status=/sys/class/power_supply/usb/online
+  usb_current=/sys/class/power_supply/usb/current_now
+  usb_voltage=/sys/class/power_supply/usb/voltage_now
+  wireless_status=/sys/class/power_supply/wireless/online
+  wireless_current=/sys/class/power_supply/wireless/current_now
+  wireless_voltage=/sys/class/power_supply/wireless/voltage_now
+
+# MMC56X3X.
++/dev/mmc56x3x/0
+  bus_name=i3c2
+  bus_freq_hz=400000
+  i3c_freq_hz=1230000
+  bus_addr=0x30
+  i3c_addr=0x14
+
+# MMC56X3X mag.
++/dev/mmc56x3x/0/mag
+  orientation_transform=-2 1 3
+
+# TCS3410.
++/dev/tcs3410/0
+  bus_name=i2c0
+  bus_freq_hz=400000
+  bus_addr=0x39
+  intr_id=15
+  fifo_threshold=50
+
++/dev/tcs3410/0/als
+  # Lux equation coefficients are selected by comparing IR compensate ratio with
+  # ir_compensate_ratio_low and ir_compensate_ratio_high. Current use the same
+  # coefficients for all IR compensate ratio.
+  red_coeffs=-0.136 -0.2 -0.83
+  green_coeffs=0.087 0.087 0.087
+  blue_coeffs=-0.231 -0.231 -0.231
+  wide_coeffs=0.0 0.0 0.0
+  clear_coeffs=0.252 0.252 0.252
+  lux_coeff=350.0
+  gain=0x0a
+  # Integration time = sample_time * als_nr_samples * 1.38us.
+  # Both sample_time and als_nr_samples are 11 bits wide.
+  sample_time=180
+  als_nr_samples=200
+  ir_compensate_ratio_low=0.012
+  ir_compensate_ratio_high=0.15
+  golden_lux_scale=1.02
+  golden_cct_scale=0.975
+
++/dev/tcs3410/0/color
+  ct_coeffs=1688.0 4640.0 2979.0
+
++/dev/tcs3410/0/flicker
+  fd_nr_samples=1000
+
+# DRV5032 Hall Effect.
++/dev/drv5032/0
+  gpio_id=gpio81
+  intr_id=42
+  priority=0
+  name=DRV5032 Hall Effect Sensor 0
+
++/dev/drv5032/1
+  gpio_id=gpio88
+  intr_id=45
+  priority=1
+  name=DRV5032 Hall Effect Sensor 1
+
++/dev/drv5032/2
+  gpio_id=gpio89
+  intr_id=46
+  priority=2
+  name=DRV5032 Hall Effect Sensor 2
+
++/dev/hall_effect_service/0
+  file=/sys/devices/platform/google,pogo/hall1_s
++/dev/hall_effect_service/1
+  file=/sys/devices/platform/google,pogo/hall2_s
+  send_sw_lid_event=1
++/dev/hall_effect_service/2
+  file=/sys/devices/platform/google,pogo/hall1_n
+
+# VSC.
++/vsc
+  quick_pick_up_enable=0
+  double_twist_enable=0
+
++/vsc/auto_brightness
+  # float[3]={LuxToEnter, LuxToExit, RemappedLux}
+  lux_remap=-1.0 -1.0 -1.0
+  # float[3]={MinDelta, MaxDelta, LuxRatio}
+  lux_debounce_up=0.1 5000 0.1
+  lux_debounce_down=0.1 5000 0.1
+  # ALS[2], RLS[2], Fusion[2], each containing <maxSampleAgeMsec> and <maxNumOfSamples>
+  filter_configs=100 2 100 2 100 2
+  # float[3]={MaxNumOfSamplesToFilter, minLuxThresh, luxRatio}, set to 0 to disable
+  als_startup_filter=0 0 0
+
+# Device Pickup.
++/vsc/device_pickup
+  tablet_mode=1

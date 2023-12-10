@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- These are configurations that should exist on devices that support Communal Mode -->
+<config>
+  <!-- This feature is meant to be the feature identifying devices that support Communal Mode.-->
+  <feature name="android.software.communal_mode" />
+  <!-- Cast Receiver must be alive while device is idle for Wake on Cast. -->
+  <allow-in-power-save package="com.google.android.apps.mediashell" />
+  <!--Enable Mediashell to use the Bugreport API -->
+  <bugreport-whitelisted package="com.google.android.apps.mediashell" />
+  <!-- Enable Mediashell so this device can act as a Google Cast receiver. -->
+  <feature name="com.google.android.software.cast_receiver" />
+</config>
