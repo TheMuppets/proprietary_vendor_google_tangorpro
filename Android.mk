@@ -6,13 +6,13 @@ LOCAL_PATH := $(call my-dir)
 
 ifeq ($(TARGET_DEVICE),tangorpro)
 
-$(call add-radio-file,radio/abl.img)
-$(call add-radio-file,radio/bl1.img)
-$(call add-radio-file,radio/bl2.img)
-$(call add-radio-file,radio/bl31.img)
-$(call add-radio-file,radio/gsa.img)
-$(call add-radio-file,radio/ldfw.img)
-$(call add-radio-file,radio/pbl.img)
-$(call add-radio-file,radio/tzsw.img)
+$(call add-radio-file-sha1-checked,radio/abl.img,90e386349654d877087f34589508d31f41272f86)
+$(call add-radio-file-sha1-checked,radio/bl1.img,1eab12035930719dce07c6ae5f4a6e12ffb361da)
+$(call add-radio-file-sha1-checked,radio/bl2.img,9c5b2820acadc0df162d61a348bd3fcc7809dc21)
+$(call add-radio-file-sha1-checked,radio/bl31.img,80e1f22e9edfb3f39d5b84d7b2de0e232239494b)
+$(call add-radio-file-sha1-checked,radio/gsa.img,09042ce16e0af2cd09fb65e04305fc7433616dab)
+$(call add-radio-file-sha1-checked,radio/ldfw.img,33edc3bf8eaec9407a0b55adfedd02d3ddf16ea6)
+$(call add-radio-file-sha1-checked,radio/pbl.img,ac47dc519d5ea1105e32e45854c9563210d0e837)
+$(call add-radio-file-sha1-checked,radio/tzsw.img,e240dc24aacd799d71e29bbb7231c04d047f536b)
 
 endif
