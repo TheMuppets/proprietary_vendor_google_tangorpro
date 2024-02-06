@@ -59,12 +59,12 @@ PRODUCT_PACKAGES += \
     DevicePersonalizationPrebuiltPixelTablet2023 \
     DockManagerPrebuilt \
     HardwareInfo \
+    HomegraphPrebuilt \
     HotwordEnrollmentOKGoogleFUSIONPro \
     HotwordEnrollmentXGoogleFUSIONPro \
     PixelCameraServicesT6PRO \
-    HomegraphPrebuilt \
-    UsoniaPrebuilt \
     SmartDisplayPrebuilt \
+    UsoniaPrebuilt \
     ConnectivityThermalPowerManager \
     DockSetup \
     HbmSVManager \
