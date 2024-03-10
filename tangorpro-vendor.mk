@@ -95,6 +95,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/vendor/bin/hw/citadel_updater:$(TARGET_COPY_OUT_VENDOR)/bin/hw/citadel_updater \
     vendor/google/tangorpro/proprietary/vendor/bin/hw/citadeld:$(TARGET_COPY_OUT_VENDOR)/bin/hw/citadeld \
     vendor/google/tangorpro/proprietary/vendor/bin/hw/com.google.edgetpu.dba-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/com.google.edgetpu.dba-service \
+    vendor/google/tangorpro/proprietary/vendor/bin/hw/com.google.edgetpu.tachyon-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/com.google.edgetpu.tachyon-service \
     vendor/google/tangorpro/proprietary/vendor/bin/hw/google.hardware.media.c2@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/google.hardware.media.c2@1.0-service \
     vendor/google/tangorpro/proprietary/vendor/bin/hw/init_citadel:$(TARGET_COPY_OUT_VENDOR)/bin/hw/init_citadel \
     vendor/google/tangorpro/proprietary/vendor/bin/hw/samsung.hardware.media.c2@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/samsung.hardware.media.c2@1.0-service \
@@ -152,6 +153,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/vendor/etc/chre/uv_exposure.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/uv_exposure.so \
     vendor/google/tangorpro/proprietary/vendor/etc/display_settings.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display_settings.xml \
     vendor/google/tangorpro/proprietary/vendor/etc/displayconfig/display_id_4619827677550801152.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4619827677550801152.xml \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/Exynos_C2.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/Exynos_C2.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.authsecret-service.citadel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.authsecret-service.citadel.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.bluetooth@1.1-service.synabtlinux.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.1-service.synabtlinux.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.camera.provider@2.7-service-google-apex.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.camera.provider@2.7-service-google-apex.rc \
@@ -169,6 +171,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/vendor/etc/init/chre_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/chre_daemon.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/citadeld.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/citadeld.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/com.google.edgetpu.dba-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/com.google.edgetpu.dba-service.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/com.google.edgetpu.tachyon-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/com.google.edgetpu.tachyon-service.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/fingerprint-fpc42.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fingerprint-fpc42.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/google.hardware.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/google.hardware.media.c2@1.0-service.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/init.camera.set-interrupts-ownership.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.camera.set-interrupts-ownership.rc \
@@ -207,7 +210,6 @@ PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/vendor/etc/sensors/registry/append/power.reg:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/registry/append/power.reg \
     vendor/google/tangorpro/proprietary/vendor/etc/sensors/registry/tangorpro_black.reg:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/registry/tangorpro_black.reg \
     vendor/google/tangorpro/proprietary/vendor/etc/sensors/registry/tangorpro_white.reg:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/registry/tangorpro_white.reg \
-    vendor/google/tangorpro/proprietary/vendor/etc/sysconfig/allowlist_com.google.android.widevine.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/allowlist_com.google.android.widevine.xml \
     vendor/google/tangorpro/proprietary/vendor/etc/touchflow.pb:$(TARGET_COPY_OUT_VENDOR)/etc/touchflow.pb \
     vendor/google/tangorpro/proprietary/vendor/etc/twoshay_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/twoshay_config.json \
     vendor/google/tangorpro/proprietary/vendor/etc/uwb/calib_paths:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/calib_paths \
@@ -326,6 +328,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/vendor/lib64/android.hardware.keymaster@4.1-impl.nos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.keymaster@4.1-impl.nos.so \
     vendor/google/tangorpro/proprietary/vendor/lib64/android.hardware.oemlock-impl.nos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.oemlock-impl.nos.so \
     vendor/google/tangorpro/proprietary/vendor/lib64/android.hardware.security.keymint-impl.nos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.security.keymint-impl.nos.so \
+    vendor/google/tangorpro/proprietary/vendor/lib64/android.hardware.weaver-bridge.nos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.weaver-bridge.nos.so \
     vendor/google/tangorpro/proprietary/vendor/lib64/android.hardware.weaver-impl.nos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.weaver-impl.nos.so \
     vendor/google/tangorpro/proprietary/vendor/lib64/android.hardware.weaver2-impl.nos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.weaver2-impl.nos.so \
     vendor/google/tangorpro/proprietary/vendor/lib64/aoc_aud_ext.so:$(TARGET_COPY_OUT_VENDOR)/lib64/aoc_aud_ext.so \
@@ -345,8 +348,10 @@ PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/vendor/lib64/biometricsuez.so:$(TARGET_COPY_OUT_VENDOR)/lib64/biometricsuez.so \
     vendor/google/tangorpro/proprietary/vendor/lib64/com.fingerprints42.extension@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.fingerprints42.extension@1.0.so \
     vendor/google/tangorpro/proprietary/vendor/lib64/com.google.edgetpu.dba-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.edgetpu.dba-V1-ndk.so \
+    vendor/google/tangorpro/proprietary/vendor/lib64/com.google.edgetpu.tachyon-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.edgetpu.tachyon-V1-ndk.so \
     vendor/google/tangorpro/proprietary/vendor/lib64/com.google.edgetpu_app_service-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.edgetpu_app_service-V2-ndk.so \
     vendor/google/tangorpro/proprietary/vendor/lib64/com.google.edgetpu_vendor_service-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.edgetpu_vendor_service-V2-ndk.so \
+    vendor/google/tangorpro/proprietary/vendor/lib64/com.google.hardware.biometrics.parcelable.fingerprint.PressToAuthParcelable-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.hardware.biometrics.parcelable.fingerprint.PressToAuthParcelable-V1-ndk.so \
     vendor/google/tangorpro/proprietary/vendor/lib64/com.google.hardware.biometrics.sidefps.fingerprint-ext-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.hardware.biometrics.sidefps.fingerprint-ext-V1-ndk.so \
     vendor/google/tangorpro/proprietary/vendor/lib64/com.google.input-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.input-V2-ndk.so \
     vendor/google/tangorpro/proprietary/vendor/lib64/egl/libGLES_mali.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libGLES_mali.so \
@@ -420,15 +425,17 @@ PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/vendor/lib64/libspeechenhancer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libspeechenhancer.so \
     vendor/google/tangorpro/proprietary/vendor/lib64/libstreset21.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstreset21.so \
     vendor/google/tangorpro/proprietary/vendor/lib64/libsueznanoappclients.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsueznanoappclients.so \
+    vendor/google/tangorpro/proprietary/vendor/lib64/libtachyon_core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtachyon_core.so \
     vendor/google/tangorpro/proprietary/vendor/lib64/libtouchflow.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtouchflow.so \
     vendor/google/tangorpro/proprietary/vendor/lib64/libusf.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libusf.so \
     vendor/google/tangorpro/proprietary/vendor/lib64/sensors.usf.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.usf.so \
+    vendor/google/tangorpro/proprietary/vendor/lib64/sideFpsSuez.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sideFpsSuez.so \
     vendor/google/tangorpro/proprietary/vendor/lib64/soundfx/liboffloadeffect.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/liboffloadeffect.so \
     vendor/google/tangorpro/proprietary/vendor/lib64/soundfx/libspatialaudio.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libspatialaudio.so \
     vendor/google/tangorpro/proprietary/vendor/lib64/vendor-pixelatoms-cpp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor-pixelatoms-cpp.so \
     vendor/google/tangorpro/proprietary/vendor/lib64/vendor.google.audiometricext@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.audiometricext@1.0.so \
     vendor/google/tangorpro/proprietary/vendor/lib64/vendor.google.bluetooth_ext-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.bluetooth_ext-V1-ndk.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/vendor.google.google_battery-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.google_battery-V2-ndk.so \
+    vendor/google/tangorpro/proprietary/vendor/lib64/vendor.google.google_battery-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.google_battery-V3-ndk.so \
     vendor/google/tangorpro/proprietary/vendor/lib64/vendor.google.whitechapel.audio.audioext@4.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.whitechapel.audio.audioext@4.0.so \
     vendor/google/tangorpro/proprietary/vendor/lib64/vendor.google.wifi_ext-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.wifi_ext-V1-ndk.so \
     vendor/google/tangorpro/proprietary/vendor/lib64/vendor_chre_atoms_log.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor_chre_atoms_log.so \
@@ -436,7 +443,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     libOpenCL \
-    com.google.android.widevine \
+    com.google.android.widevine-wv_341113000 \
     com.google.pixel.camera.hal \
     com.google.pixel.wifi.ext \
     com.google.android.camera.experimental2022 \
@@ -449,6 +456,7 @@ PRODUCT_PACKAGES += \
     android.hardware.security.keymint-service.citadel \
     android.hardware.weaver-service.citadel \
     com.google.edgetpu.dba-service \
+    com.google.edgetpu.tachyon-service \
     fingerprint-fpc42 \
     manifest_input.processor-service \
     manifest_radioext \

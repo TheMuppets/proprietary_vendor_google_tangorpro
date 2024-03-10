@@ -59,6 +59,9 @@ reg_script=tangorpro_white.reg
 
 # LSM6DSR temp.
 +/dev/lsm6dsr/0/temp
++/dev/lsm6dsr/0/motion_detect
++/dev/lsm6dsr/0/stationary_detect
++/dev/lsm6dsr/0/free_fall_detect
 
 # Camera VSYNC.
 +/dev/camera_vsync/0  # front
@@ -67,16 +70,6 @@ reg_script=tangorpro_white.reg
 +/dev/camera_vsync/1  # rear
   intr_id=59
   intr_trigger_type=2
-
-# For MagCC
-+/dev/magcc/0
-  battery_status=/sys/class/power_supply/battery/status
-  usb_status=/sys/class/power_supply/usb/online
-  usb_current=/sys/class/power_supply/usb/current_now
-  usb_voltage=/sys/class/power_supply/usb/voltage_now
-  wireless_status=/sys/class/power_supply/wireless/online
-  wireless_current=/sys/class/power_supply/wireless/current_now
-  wireless_voltage=/sys/class/power_supply/wireless/voltage_now
 
 # MMC56X3X.
 +/dev/mmc56x3x/0

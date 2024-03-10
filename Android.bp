@@ -11,6 +11,7 @@ android_app_import {
 	name: "AndroidMediaShell",
 	owner: "google",
 	apk: "proprietary/product/priv-app/AndroidMediaShell/AndroidMediaShell.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -23,6 +24,7 @@ android_app_import {
 	name: "CastAuthPrebuilt",
 	owner: "google",
 	apk: "proprietary/product/priv-app/CastAuthPrebuilt/CastAuthPrebuilt.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -35,6 +37,7 @@ android_app_import {
 	name: "DeviceIntelligenceNetworkPrebuilt",
 	owner: "google",
 	apk: "proprietary/product/priv-app/DeviceIntelligenceNetworkPrebuilt/DeviceIntelligenceNetworkPrebuilt.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -47,6 +50,7 @@ android_app_import {
 	name: "DevicePersonalizationPrebuiltPixelTablet2023",
 	owner: "google",
 	apk: "proprietary/product/priv-app/DevicePersonalizationPrebuiltPixelTablet2023/DevicePersonalizationPrebuiltPixelTablet2023.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -59,6 +63,7 @@ android_app_import {
 	name: "DockManagerPrebuilt",
 	owner: "google",
 	apk: "proprietary/product/priv-app/DockManagerPrebuilt/DockManagerPrebuilt.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -71,6 +76,7 @@ android_app_import {
 	name: "HardwareInfo",
 	owner: "google",
 	apk: "proprietary/product/priv-app/HardwareInfo/HardwareInfo.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -83,6 +89,7 @@ android_app_import {
 	name: "HomegraphPrebuilt",
 	owner: "google",
 	apk: "proprietary/product/priv-app/HomegraphPrebuilt/HomegraphPrebuilt.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -95,6 +102,7 @@ android_app_import {
 	name: "HotwordEnrollmentOKGoogleFUSIONPro",
 	owner: "google",
 	apk: "proprietary/product/priv-app/HotwordEnrollmentOKGoogleFUSIONPro/HotwordEnrollmentOKGoogleFUSIONPro.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -107,6 +115,7 @@ android_app_import {
 	name: "HotwordEnrollmentXGoogleFUSIONPro",
 	owner: "google",
 	apk: "proprietary/product/priv-app/HotwordEnrollmentXGoogleFUSIONPro/HotwordEnrollmentXGoogleFUSIONPro.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -119,6 +128,7 @@ android_app_import {
 	name: "PixelCameraServicesT6PRO",
 	owner: "google",
 	apk: "proprietary/product/priv-app/PixelCameraServicesT6PRO/PixelCameraServicesT6PRO.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -131,6 +141,7 @@ android_app_import {
 	name: "SmartDisplayPrebuilt",
 	owner: "google",
 	apk: "proprietary/product/priv-app/SmartDisplayPrebuilt/SmartDisplayPrebuilt.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -143,6 +154,7 @@ android_app_import {
 	name: "UsoniaPrebuilt",
 	owner: "google",
 	apk: "proprietary/product/priv-app/UsoniaPrebuilt/UsoniaPrebuilt.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -167,6 +179,7 @@ android_app_import {
 	name: "DockSetup",
 	owner: "google",
 	apk: "proprietary/system_ext/priv-app/DockSetup/DockSetup.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -191,6 +204,7 @@ android_app_import {
 	name: "UwbVendorService",
 	owner: "google",
 	apk: "proprietary/system_ext/priv-app/UwbVendorService/UwbVendorService.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -203,6 +217,7 @@ android_app_import {
 	name: "grilservice",
 	owner: "google",
 	apk: "proprietary/system_ext/priv-app/grilservice/grilservice.apk",
+	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
 		enabled: false,
@@ -276,10 +291,10 @@ cc_prebuilt_library_shared {
 }
 
 prebuilt_apex {
-	name: "com.google.android.widevine",
+	name: "com.google.android.widevine-wv_341113000",
 	owner: "google",
-	src: "proprietary/vendor/apex/com.google.android.widevine.apex",
-	filename: "com.google.android.widevine.apex",
+	src: "proprietary/vendor/apex/com.google.android.widevine-wv_341113000.apex",
+	filename: "com.google.android.widevine-wv_341113000.apex",
 	soc_specific: true,
 }
 
@@ -382,6 +397,15 @@ prebuilt_etc_xml {
 	name: "com.google.edgetpu.dba-service",
 	owner: "google",
 	src: "proprietary/vendor/etc/vintf/manifest/com.google.edgetpu.dba-service.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "com.google.edgetpu.tachyon-service",
+	owner: "google",
+	src: "proprietary/vendor/etc/vintf/manifest/com.google.edgetpu.tachyon-service.xml",
 	filename_from_src: true,
 	sub_dir: "vintf/manifest",
 	soc_specific: true,

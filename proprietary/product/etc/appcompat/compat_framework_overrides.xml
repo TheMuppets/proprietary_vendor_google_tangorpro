@@ -273,6 +273,16 @@
             <override-value packageName="com.zlongame.kr.u2" enabled="true" />
             <!--  Towerlands: Tower Defense TD  -->
             <override-value packageName="mobi.blackbears.towerlands" enabled="true" />
+            <!-- Maze Runner 3D -->
+            <override-value packageName="com.EntertainmentTheory.EscapeTheGlade" enabled="true" />
+            <!-- Wild Space -->
+            <override-value packageName="wild.space.action" enabled="true" />
+            <!-- Parcel Rangers - Running Game -->
+            <override-value packageName="dk.alimote.parcelrangers" enabled="true" />
+            <!-- Amazing Paw, kids game. -->
+            <override-value packageName="com.TimOptimum.AmazingPaw" enabled="true" />
+            <!-- Archery Season 3D: Bow & Arrow -->
+            <override-value packageName="com.oriyafriend.archeryseason3d" enabled="true" />
         </validated>
     </change-overrides>
     <!-- OVERRIDE_CAMERA_COMPAT_DISABLE_FORCE_ROTATION -->

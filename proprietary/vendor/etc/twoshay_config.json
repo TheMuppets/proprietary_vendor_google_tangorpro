@@ -18,32 +18,33 @@
 					}
 				},
 				{
-					"class": "StylusPalmAlgorithm",
-					"name": "stylus_palm_suppression",
-					"blocked_by": ["grip_suppression"],
-					"parameters": {
-						"enable_cancel": true,
-						"enable_debug_log": true,
-						"operation_mode": 2,
-						"decision_threshold": 0.3,
-						"threshold_decrease_edge": 0.2,
-						"threshold_decrease_multiple_blobs": 0.3,
-						"threshold_decrease_stylus_active": 0.4,
-						"finger_threshold_margin": 0.4,
-						"palm_threshold_margin": 0.6,
-						"landed_time_threshold": 0.1,
-						"confident_palm_threshold": 1.5
-					}
-				},
-				{
 					"class": "TouchflowAlgorithm",
 					"name": "touchflow",
-					"blocked_by": ["stylus_palm_suppression"],
+					"blocked_by": ["grip_suppression"],
 				},
+                                {
+                                        "class": "StylusPalmAlgorithm",
+                                        "name": "stylus_palm_suppression",
+                                        "blocked_by": ["touchflow"],
+                                        "parameters": {
+                                                "enable_cancel": true,
+                                                "enable_debug_log": true,
+                                                "operation_mode": 2,
+                                                "decision_threshold": 0.3,
+                                                "threshold_decrease_edge": 0.2,
+                                                "threshold_decrease_multiple_blobs": 0.3,
+                                                "threshold_decrease_stylus_active": 0.4,
+                                                "finger_threshold_margin": 0.4,
+                                                "palm_threshold_margin": 0.6,
+                                                "landed_time_threshold": 0.1,
+                                                "confident_palm_threshold": 1.5,
+                                                "continuous_active_time_sec": 300
+                                        }
+                                },
 				{
 					"class": "ReportingAlgorithm",
 					"name": "reporting",
-					"blocked_by": ["touchflow"],
+					"blocked_by": ["stylus_palm_suppression"],
 				},
 				{
 					"class": "TouchSuezAlgorithm",

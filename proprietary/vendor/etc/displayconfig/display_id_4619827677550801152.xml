@@ -32,6 +32,8 @@
     </lightSensor>
 
     <screenBrightnessRampIncreaseMaxMillis>2000</screenBrightnessRampIncreaseMaxMillis>
+    <screenBrightnessRampIncreaseMaxIdleMillis>2000</screenBrightnessRampIncreaseMaxIdleMillis>
+    <screenBrightnessRampDecreaseMaxIdleMillis>2000</screenBrightnessRampDecreaseMaxIdleMillis>
 
     <ambientBrightnessChangeThresholdsIdle>
         <brighteningThresholds>
@@ -178,6 +180,13 @@
             </brightnessThrottlingPoint>
         </brightnessThrottlingMap>
     </thermalThrottling>
+
+    <autoBrightness enabled="true">
+        <brighteningLightDebounceMillis>1000</brighteningLightDebounceMillis>
+        <darkeningLightDebounceMillis>4000</darkeningLightDebounceMillis>
+        <brighteningLightDebounceIdleMillis>1000</brighteningLightDebounceIdleMillis>
+        <darkeningLightDebounceIdleMillis>2000</darkeningLightDebounceIdleMillis>
+    </autoBrightness>
 
     <screenBrightnessRampFastDecrease>0.7047244</screenBrightnessRampFastDecrease>
     <screenBrightnessRampFastIncrease>0.7047244</screenBrightnessRampFastIncrease>
