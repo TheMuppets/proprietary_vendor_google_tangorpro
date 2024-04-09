@@ -20,6 +20,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/product/etc/permissions/com.google.android.hardwareinfo.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.hardwareinfo.xml \
     vendor/google/tangorpro/proprietary/product/etc/permissions/com.google.assistant.hubui.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.assistant.hubui.xml \
     vendor/google/tangorpro/proprietary/product/etc/permissions/privapp-permissions-google-p-lineage.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-google-p-lineage.xml \
+    vendor/google/tangorpro/proprietary/product/etc/sysconfig/GoogleCamera_6gb_or_more_ram.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/GoogleCamera_6gb_or_more_ram.xml \
     vendor/google/tangorpro/proprietary/product/etc/sysconfig/communal.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/communal.xml \
     vendor/google/tangorpro/proprietary/product/etc/sysconfig/google-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/google-hiddenapi-package-whitelist.xml \
     vendor/google/tangorpro/proprietary/product/etc/sysconfig/google-nest-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/google-nest-hiddenapi-package-whitelist.xml \
