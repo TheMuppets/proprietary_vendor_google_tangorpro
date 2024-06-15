@@ -2,7 +2,7 @@
     Input:
         vendor/fpc/sw42/fingerprint_hal/fingerprint_aidl/default/fingerprint-fpc42.xml
 -->
-<manifest version="7.0" type="device">
+<manifest version="8.0" type="device">
     <hal format="aidl">
         <name>android.hardware.biometrics.fingerprint</name>
         <version>3</version>

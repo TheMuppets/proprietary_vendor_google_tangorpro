@@ -34,9 +34,9 @@ android_app_import {
 }
 
 android_app_import {
-	name: "DeviceIntelligenceNetworkPrebuilt",
+	name: "DeviceIntelligenceNetworkPrebuilt-v.U.14.playstore",
 	owner: "google",
-	apk: "proprietary/product/priv-app/DeviceIntelligenceNetworkPrebuilt/DeviceIntelligenceNetworkPrebuilt.apk",
+	apk: "proprietary/product/priv-app/DeviceIntelligenceNetworkPrebuilt-v.U.14.playstore/DeviceIntelligenceNetworkPrebuilt-v.U.14.playstore.apk",
 	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
@@ -47,9 +47,9 @@ android_app_import {
 }
 
 android_app_import {
-	name: "DevicePersonalizationPrebuiltPixelTablet2023",
+	name: "DevicePersonalizationPrebuiltPixelTablet2023-v.U.14.playstore",
 	owner: "google",
-	apk: "proprietary/product/priv-app/DevicePersonalizationPrebuiltPixelTablet2023/DevicePersonalizationPrebuiltPixelTablet2023.apk",
+	apk: "proprietary/product/priv-app/DevicePersonalizationPrebuiltPixelTablet2023-v.U.14.playstore/DevicePersonalizationPrebuiltPixelTablet2023-v.U.14.playstore.apk",
 	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
@@ -125,9 +125,9 @@ android_app_import {
 }
 
 android_app_import {
-	name: "PixelCameraServicesT6PRO",
+	name: "PixelCameraServices",
 	owner: "google",
-	apk: "proprietary/product/priv-app/PixelCameraServicesT6PRO/PixelCameraServicesT6PRO.apk",
+	apk: "proprietary/product/priv-app/PixelCameraServices/PixelCameraServices.apk",
 	preprocessed: true,
 	presigned: true,
 	dex_preopt: {
@@ -349,6 +349,15 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
+	name: "android.hardware.contexthub-service.generic",
+	owner: "google",
+	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.contexthub-service.generic.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
 	name: "android.hardware.identity.strongbox",
 	owner: "google",
 	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.identity.strongbox.xml",
@@ -460,6 +469,15 @@ prebuilt_etc_xml {
 	name: "vendor.dolby.media.c2@1.0-service",
 	owner: "google",
 	src: "proprietary/vendor/etc/vintf/manifest/vendor.dolby.media.c2@1.0-service.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "vendor.google.battery_mitigation-default",
+	owner: "google",
+	src: "proprietary/vendor/etc/vintf/manifest/vendor.google.battery_mitigation-default.xml",
 	filename_from_src: true,
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
