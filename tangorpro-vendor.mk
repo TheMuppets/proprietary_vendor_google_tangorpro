@@ -77,6 +77,9 @@ PRODUCT_PACKAGES += \
     com.google.android.camerax.extensions \
     google-ril \
     vendor.google.edgetpu_app_service@1.0-service
+
+PRODUCT_PACKAGES += \
+    libhbmsvmanager_jni_libhbmsvmanager_jni_symlink64
 PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/vendor/bin/aocd:$(TARGET_COPY_OUT_VENDOR)/bin/aocd \
     vendor/google/tangorpro/proprietary/vendor/bin/aocxd:$(TARGET_COPY_OUT_VENDOR)/bin/aocxd \

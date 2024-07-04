@@ -270,6 +270,13 @@ prebuilt_etc_xml {
 	system_ext_specific: true,
 }
 
+install_symlink {
+	name: "libhbmsvmanager_jni_libhbmsvmanager_jni_symlink64",
+	system_ext_specific: true,
+	installed_location: "priv-app/HbmSVManager/lib/arm64/libhbmsvmanager_jni.so",
+	symlink_target: "/system_ext/lib64/libhbmsvmanager_jni.so",
+}
+
 cc_prebuilt_library_shared {
 	name: "libOpenCL",
 	owner: "google",
