@@ -38,7 +38,6 @@ PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/product/etc/sysconfig/pixel_experience_2022.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2022.xml \
     vendor/google/tangorpro/proprietary/product/etc/sysconfig/pixel_experience_2022_midyear.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2022_midyear.xml \
     vendor/google/tangorpro/proprietary/product/etc/sysconfig/pixel_tablet_experience_2023.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_tablet_experience_2023.xml \
-    vendor/google/tangorpro/proprietary/system_ext/bin/hw/vendor.google.edgetpu_app_service@1.0-service:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/hw/vendor.google.edgetpu_app_service@1.0-service \
     vendor/google/tangorpro/proprietary/system_ext/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc \
     vendor/google/tangorpro/proprietary/system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.hotwordenrollment.common.util.xml \
     vendor/google/tangorpro/proprietary/system_ext/etc/permissions/com.google.android.camera.extensions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.google.android.camera.extensions.xml \
@@ -46,14 +45,13 @@ PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/system_ext/etc/permissions/google-ril.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/google-ril.xml \
     vendor/google/tangorpro/proprietary/system_ext/etc/permissions/privapp-permissions-google-se-lineage.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-google-se-lineage.xml \
     vendor/google/tangorpro/proprietary/system_ext/etc/permissions/privapp-permissions-qorvo.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-qorvo.xml \
-    vendor/google/tangorpro/proprietary/system_ext/etc/public.libraries-google.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries-google.txt \
-    vendor/google/tangorpro/proprietary/system_ext/lib/libedgetpu_dba.google.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libedgetpu_dba.google.so \
-    vendor/google/tangorpro/proprietary/system_ext/lib64/com.google.edgetpu_app_service-V3-ndk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/com.google.edgetpu_app_service-V3-ndk.so \
-    vendor/google/tangorpro/proprietary/system_ext/lib64/com.google.edgetpu_vendor_service-V2-ndk.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/com.google.edgetpu_vendor_service-V2-ndk.so \
-    vendor/google/tangorpro/proprietary/system_ext/lib64/libedgetpu_dba.google.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libedgetpu_dba.google.so \
-    vendor/google/tangorpro/proprietary/system_ext/lib64/libhbmsvmanager_jni.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libhbmsvmanager_jni.so
+    vendor/google/tangorpro/proprietary/system_ext/etc/public.libraries-google.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries-google.txt
 
 PRODUCT_PACKAGES += \
+    libedgetpu_dba.google \
+    com.google.edgetpu_app_service-V3-ndk \
+    com.google.edgetpu_vendor_service-V2-ndk \
+    libhbmsvmanager_jni \
     AndroidMediaShell \
     CastAuthPrebuilt \
     DeviceIntelligenceNetworkPrebuilt-v.U.14.playstore \
@@ -76,47 +74,12 @@ PRODUCT_PACKAGES += \
     com.google.android.camera.extensions \
     com.google.android.camerax.extensions \
     google-ril \
+    vendor.google.edgetpu_app_service@1.0-service \
     vendor.google.edgetpu_app_service@1.0-service
 
 PRODUCT_PACKAGES += \
     libhbmsvmanager_jni_libhbmsvmanager_jni_symlink64
 PRODUCT_COPY_FILES += \
-    vendor/google/tangorpro/proprietary/vendor/bin/aocd:$(TARGET_COPY_OUT_VENDOR)/bin/aocd \
-    vendor/google/tangorpro/proprietary/vendor/bin/aocxd:$(TARGET_COPY_OUT_VENDOR)/bin/aocxd \
-    vendor/google/tangorpro/proprietary/vendor/bin/hw/android.hardware.authsecret-service.citadel:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.authsecret-service.citadel \
-    vendor/google/tangorpro/proprietary/vendor/bin/hw/android.hardware.biometrics.fingerprint-service.fpc42:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.biometrics.fingerprint-service.fpc42 \
-    vendor/google/tangorpro/proprietary/vendor/bin/hw/android.hardware.bluetooth@1.1-service.synabtlinux:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.bluetooth@1.1-service.synabtlinux \
-    vendor/google/tangorpro/proprietary/vendor/bin/hw/android.hardware.confirmationui-service.trusty.vendor:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.confirmationui-service.trusty.vendor \
-    vendor/google/tangorpro/proprietary/vendor/bin/hw/android.hardware.contexthub-service.generic:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.contexthub-service.generic \
-    vendor/google/tangorpro/proprietary/vendor/bin/hw/android.hardware.edgetpu.logging@service-edgetpu-logging:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.edgetpu.logging@service-edgetpu-logging \
-    vendor/google/tangorpro/proprietary/vendor/bin/hw/android.hardware.gxp.logging@service-gxp-logging:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.gxp.logging@service-gxp-logging \
-    vendor/google/tangorpro/proprietary/vendor/bin/hw/android.hardware.identity@1.0-service.citadel:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.identity@1.0-service.citadel \
-    vendor/google/tangorpro/proprietary/vendor/bin/hw/android.hardware.input.processor-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.input.processor-service \
-    vendor/google/tangorpro/proprietary/vendor/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.neuralnetworks@service-darwinn-aidl \
-    vendor/google/tangorpro/proprietary/vendor/bin/hw/android.hardware.oemlock-service.citadel:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.oemlock-service.citadel \
-    vendor/google/tangorpro/proprietary/vendor/bin/hw/android.hardware.qorvo.uwb.service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.qorvo.uwb.service \
-    vendor/google/tangorpro/proprietary/vendor/bin/hw/android.hardware.security.keymint-service.citadel:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.security.keymint-service.citadel \
-    vendor/google/tangorpro/proprietary/vendor/bin/hw/android.hardware.weaver-service.citadel:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.weaver-service.citadel \
-    vendor/google/tangorpro/proprietary/vendor/bin/hw/battery_mitigation:$(TARGET_COPY_OUT_VENDOR)/bin/hw/battery_mitigation \
-    vendor/google/tangorpro/proprietary/vendor/bin/hw/citadel_updater:$(TARGET_COPY_OUT_VENDOR)/bin/hw/citadel_updater \
-    vendor/google/tangorpro/proprietary/vendor/bin/hw/citadeld:$(TARGET_COPY_OUT_VENDOR)/bin/hw/citadeld \
-    vendor/google/tangorpro/proprietary/vendor/bin/hw/com.google.edgetpu.dba-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/com.google.edgetpu.dba-service \
-    vendor/google/tangorpro/proprietary/vendor/bin/hw/com.google.edgetpu.tachyon-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/com.google.edgetpu.tachyon-service \
-    vendor/google/tangorpro/proprietary/vendor/bin/hw/google.hardware.media.c2@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/google.hardware.media.c2@1.0-service \
-    vendor/google/tangorpro/proprietary/vendor/bin/hw/init_citadel:$(TARGET_COPY_OUT_VENDOR)/bin/hw/init_citadel \
-    vendor/google/tangorpro/proprietary/vendor/bin/hw/samsung.hardware.media.c2@1.2-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/samsung.hardware.media.c2@1.2-service \
-    vendor/google/tangorpro/proprietary/vendor/bin/hw/vendor.dolby.media.c2@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.dolby.media.c2@1.0-service \
-    vendor/google/tangorpro/proprietary/vendor/bin/hw/vendor.google.audiometricext@1.0-service-vendor:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.google.audiometricext@1.0-service-vendor \
-    vendor/google/tangorpro/proprietary/vendor/bin/hw/vendor.google.edgetpu_vendor_service@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.google.edgetpu_vendor_service@1.0-service \
-    vendor/google/tangorpro/proprietary/vendor/bin/hw/vendor.google.google_battery-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.google.google_battery-service \
-    vendor/google/tangorpro/proprietary/vendor/bin/hw/vendor.google.radioext@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.google.radioext@1.0-service \
-    vendor/google/tangorpro/proprietary/vendor/bin/init.camera.set-interrupts-ownership:$(TARGET_COPY_OUT_VENDOR)/bin/init.camera.set-interrupts-ownership \
-    vendor/google/tangorpro/proprietary/vendor/bin/securedpud.slider:$(TARGET_COPY_OUT_VENDOR)/bin/securedpud.slider \
-    vendor/google/tangorpro/proprietary/vendor/bin/sscoredump:$(TARGET_COPY_OUT_VENDOR)/bin/sscoredump \
-    vendor/google/tangorpro/proprietary/vendor/bin/trusty_metricsd:$(TARGET_COPY_OUT_VENDOR)/bin/trusty_metricsd \
-    vendor/google/tangorpro/proprietary/vendor/bin/twoshay:$(TARGET_COPY_OUT_VENDOR)/bin/twoshay \
-    vendor/google/tangorpro/proprietary/vendor/bin/umfw_stat_tool:$(TARGET_COPY_OUT_VENDOR)/bin/umfw_stat_tool \
-    vendor/google/tangorpro/proprietary/vendor/bin/usf_stats:$(TARGET_COPY_OUT_VENDOR)/bin/usf_stats \
     vendor/google/tangorpro/proprietary/vendor/etc/aoc/waveform_aec_graph.tflite:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/waveform_aec_graph.tflite \
     vendor/google/tangorpro/proprietary/vendor/etc/atc_profile.json:$(TARGET_COPY_OUT_VENDOR)/etc/atc_profile.json \
     vendor/google/tangorpro/proprietary/vendor/etc/chre/activity.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/activity.napp_header \
@@ -259,203 +222,130 @@ PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/vendor/firmware/novatek_ts_mp_csot.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/novatek_ts_mp_csot.bin \
     vendor/google/tangorpro/proprietary/vendor/firmware/sarconfig.info:$(TARGET_COPY_OUT_VENDOR)/firmware/sarconfig.info \
     vendor/google/tangorpro/proprietary/vendor/firmware/syna/BTFW.hcd:$(TARGET_COPY_OUT_VENDOR)/firmware/syna/BTFW.hcd \
-    vendor/google/tangorpro/proprietary/vendor/firmware/syna/BTFW_B.hcd:$(TARGET_COPY_OUT_VENDOR)/firmware/syna/BTFW_B.hcd \
-    vendor/google/tangorpro/proprietary/vendor/lib/aoc_aud_ext.so:$(TARGET_COPY_OUT_VENDOR)/lib/aoc_aud_ext.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/aoc_audio_stereo_spatializer.so:$(TARGET_COPY_OUT_VENDOR)/lib/aoc_audio_stereo_spatializer.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/audio_adapted_info_features.so:$(TARGET_COPY_OUT_VENDOR)/lib/audio_adapted_info_features.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/audio_amcs_ext.so:$(TARGET_COPY_OUT_VENDOR)/lib/audio_amcs_ext.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/audio_apmg3_aoc.so:$(TARGET_COPY_OUT_VENDOR)/lib/audio_apmg3_aoc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/audio_bluenote_aoc.so:$(TARGET_COPY_OUT_VENDOR)/lib/audio_bluenote_aoc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/audio_bt_aoc.so:$(TARGET_COPY_OUT_VENDOR)/lib/audio_bt_aoc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/audio_cca_aoc.so:$(TARGET_COPY_OUT_VENDOR)/lib/audio_cca_aoc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/audio_fortemedia_aoc.so:$(TARGET_COPY_OUT_VENDOR)/lib/audio_fortemedia_aoc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/audio_speech_enhancer_aoc.so:$(TARGET_COPY_OUT_VENDOR)/lib/audio_speech_enhancer_aoc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/audio_spk_35l41.so:$(TARGET_COPY_OUT_VENDOR)/lib/audio_spk_35l41.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/audio_tunnel_aoc.so:$(TARGET_COPY_OUT_VENDOR)/lib/audio_tunnel_aoc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/audio_usb_aoc.so:$(TARGET_COPY_OUT_VENDOR)/lib/audio_usb_aoc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/audio_waves_aoc.so:$(TARGET_COPY_OUT_VENDOR)/lib/audio_waves_aoc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/com.google.edgetpu_app_service-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.google.edgetpu_app_service-V3-ndk.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/egl/libGLES_mali.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libGLES_mali.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/gxp_metrics_logger.so:$(TARGET_COPY_OUT_VENDOR)/lib/gxp_metrics_logger.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/hw/audio.platform.aoc.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.platform.aoc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/hw/audio.primary.gs201.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/audio.primary.gs201.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/hw/sound_trigger.primary.gs201.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/sound_trigger.primary.gs201.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/hw/vendor.google.whitechapel.audio.audioext@4.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.google.whitechapel.audio.audioext@4.0-impl.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/hw/vulkan.mali.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vulkan.mali.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libAlgFx_HiFi3z.so:$(TARGET_COPY_OUT_VENDOR)/lib/libAlgFx_HiFi3z.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libExynosC2ComponentStore.so:$(TARGET_COPY_OUT_VENDOR)/lib/libExynosC2ComponentStore.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libExynosC2H263Dec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libExynosC2H263Dec.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libExynosC2H263Enc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libExynosC2H263Enc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libExynosC2H264Dec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libExynosC2H264Dec.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libExynosC2H264Enc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libExynosC2H264Enc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libExynosC2HevcDec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libExynosC2HevcDec.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libExynosC2HevcEnc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libExynosC2HevcEnc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libExynosC2Mpeg4Dec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libExynosC2Mpeg4Dec.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libExynosC2Mpeg4Enc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libExynosC2Mpeg4Enc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libExynosC2Vp8Dec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libExynosC2Vp8Dec.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libExynosC2Vp8Enc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libExynosC2Vp8Enc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libExynosC2Vp9Dec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libExynosC2Vp9Dec.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libExynosC2Vp9Enc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libExynosC2Vp9Enc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libOpenCL-pixel.so:$(TARGET_COPY_OUT_VENDOR)/lib/libOpenCL-pixel.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/lib_aion_buffer.so:$(TARGET_COPY_OUT_VENDOR)/lib/lib_aion_buffer.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libadaptedinfo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libadaptedinfo.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libamcsextfile.so:$(TARGET_COPY_OUT_VENDOR)/lib/libamcsextfile.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libaoc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaoc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libaoctuningdecoder.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaoctuningdecoder.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libaocx.so:$(TARGET_COPY_OUT_VENDOR)/lib/libaocx.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libbo_av1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbo_av1.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libc2filterplugin.so:$(TARGET_COPY_OUT_VENDOR)/lib/libc2filterplugin.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libcast_auth.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcast_auth.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libcast_auth_aidl-cpp.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcast_auth_aidl-cpp.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libdisplaycolor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdisplaycolor.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libedgetpu_client.google.so:$(TARGET_COPY_OUT_VENDOR)/lib/libedgetpu_client.google.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libedgetpu_util.so:$(TARGET_COPY_OUT_VENDOR)/lib/libedgetpu_util.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libfvsam_prm_parser.so:$(TARGET_COPY_OUT_VENDOR)/lib/libfvsam_prm_parser.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libgc2_av1_dec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgc2_av1_dec.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libgc2_base.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgc2_base.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libgc2_cwl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgc2_cwl.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libgc2_log.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgc2_log.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libgc2_store.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgc2_store.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libgc2_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgc2_utils.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libgpudataproducer.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgpudataproducer.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libion_exynos.so:$(TARGET_COPY_OUT_VENDOR)/lib/libion_exynos.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libmahalcontroller.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmahalcontroller.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libmetrics_logger.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmetrics_logger.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libqorvo_uwb_params_nfcc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqorvo_uwb_params_nfcc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libsensorsuez.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsensorsuez.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libstreset21.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstreset21.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libsueznanoappclients.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsueznanoappclients.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/libusf.so:$(TARGET_COPY_OUT_VENDOR)/lib/libusf.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/sensors.usf.so:$(TARGET_COPY_OUT_VENDOR)/lib/sensors.usf.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/soundfx/liboffloadeffect.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/liboffloadeffect.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/soundfx/libspatialaudio.so:$(TARGET_COPY_OUT_VENDOR)/lib/soundfx/libspatialaudio.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/vendor-pixelatoms-cpp.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor-pixelatoms-cpp.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/vendor.google.battery_mitigation-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.google.battery_mitigation-V1-ndk.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/vendor.google.battery_mitigation.service_static.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.google.battery_mitigation.service_static.so \
-    vendor/google/tangorpro/proprietary/vendor/lib/vendor.google.whitechapel.audio.audioext@4.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.google.whitechapel.audio.audioext@4.0.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/android.hardware.authsecret-impl.nos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.authsecret-impl.nos.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/android.hardware.confirmationui.secure_input_citadel.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.confirmationui.secure_input_citadel.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/android.hardware.identity@1.0-impl.nos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.identity@1.0-impl.nos.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/android.hardware.keymaster@4.1-impl.nos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.keymaster@4.1-impl.nos.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/android.hardware.oemlock-impl.nos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.oemlock-impl.nos.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/android.hardware.security.keymint-impl.nos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.security.keymint-impl.nos.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/android.hardware.weaver-bridge.nos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.weaver-bridge.nos.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/android.hardware.weaver-impl.nos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.weaver-impl.nos.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/android.hardware.weaver2-impl.nos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.weaver2-impl.nos.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/aoc_aud_ext.so:$(TARGET_COPY_OUT_VENDOR)/lib64/aoc_aud_ext.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/aoc_audio_stereo_spatializer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/aoc_audio_stereo_spatializer.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/audio_adapted_info_features.so:$(TARGET_COPY_OUT_VENDOR)/lib64/audio_adapted_info_features.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/audio_amcs_ext.so:$(TARGET_COPY_OUT_VENDOR)/lib64/audio_amcs_ext.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/audio_apmg3_aoc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/audio_apmg3_aoc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/audio_bluenote_aoc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/audio_bluenote_aoc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/audio_bt_aoc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/audio_bt_aoc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/audio_cca_aoc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/audio_cca_aoc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/audio_fortemedia_aoc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/audio_fortemedia_aoc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/audio_speech_enhancer_aoc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/audio_speech_enhancer_aoc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/audio_spk_35l41.so:$(TARGET_COPY_OUT_VENDOR)/lib64/audio_spk_35l41.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/audio_tunnel_aoc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/audio_tunnel_aoc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/audio_usb_aoc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/audio_usb_aoc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/audio_waves_aoc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/audio_waves_aoc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/biometricsuez.so:$(TARGET_COPY_OUT_VENDOR)/lib64/biometricsuez.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/com.fingerprints42.extension@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.fingerprints42.extension@1.0.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/com.google.edgetpu.dba-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.edgetpu.dba-V1-ndk.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/com.google.edgetpu.tachyon-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.edgetpu.tachyon-V1-ndk.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/com.google.edgetpu_app_service-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.edgetpu_app_service-V3-ndk.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/com.google.edgetpu_vendor_service-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.edgetpu_vendor_service-V2-ndk.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/com.google.hardware.biometrics.parcelable.fingerprint.PressToAuthParcelable-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.hardware.biometrics.parcelable.fingerprint.PressToAuthParcelable-V1-ndk.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/com.google.hardware.biometrics.sidefps.fingerprint-ext-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.hardware.biometrics.sidefps.fingerprint-ext-V1-ndk.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/com.google.input-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.input-V2-ndk.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/com.google.input-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/com.google.input-V3-ndk.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/egl/libGLES_mali.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libGLES_mali.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/fake_gxp_telemetry_reader.so:$(TARGET_COPY_OUT_VENDOR)/lib64/fake_gxp_telemetry_reader.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/fpc42_suez.so:$(TARGET_COPY_OUT_VENDOR)/lib64/fpc42_suez.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/fpc_util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/fpc_util.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/gxp_metrics_logger.so:$(TARGET_COPY_OUT_VENDOR)/lib64/gxp_metrics_logger.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/gxp_telemetry_reader.so:$(TARGET_COPY_OUT_VENDOR)/lib64/gxp_telemetry_reader.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/hw/audio.platform.aoc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.platform.aoc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/hw/audio.primary.gs201.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/audio.primary.gs201.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/hw/fingerprint.fpc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/fingerprint.fpc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/hw/sound_trigger.primary.gs201.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/sound_trigger.primary.gs201.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/hw/vendor.google.whitechapel.audio.audioext@4.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.google.whitechapel.audio.audioext@4.0-impl.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/hw/vulkan.mali.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vulkan.mali.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libAlgFx_HiFi3z.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libAlgFx_HiFi3z.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libExynosC2ComponentStore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libExynosC2ComponentStore.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libExynosC2H263Dec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libExynosC2H263Dec.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libExynosC2H263Enc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libExynosC2H263Enc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libExynosC2H264Dec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libExynosC2H264Dec.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libExynosC2H264Enc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libExynosC2H264Enc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libExynosC2HevcDec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libExynosC2HevcDec.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libExynosC2HevcEnc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libExynosC2HevcEnc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libExynosC2Mpeg4Dec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libExynosC2Mpeg4Dec.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libExynosC2Mpeg4Enc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libExynosC2Mpeg4Enc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libExynosC2Vp8Dec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libExynosC2Vp8Dec.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libExynosC2Vp8Enc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libExynosC2Vp8Enc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libExynosC2Vp9Dec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libExynosC2Vp9Dec.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libExynosC2Vp9Enc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libExynosC2Vp9Enc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libOpenCL-pixel.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libOpenCL-pixel.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/lib_aion_buffer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib_aion_buffer.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/lib_reader.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib_reader.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libadaptedinfo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libadaptedinfo.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libamcsextfile.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libamcsextfile.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libaoc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaoc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libaoctuningdecoder.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaoctuningdecoder.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libaocx.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaocx.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libbo_av1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbo_av1.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libc2filterplugin.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libc2filterplugin.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libcast_auth.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcast_auth.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libcast_auth_aidl-cpp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcast_auth_aidl-cpp.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libcodec2_soft_ddpdec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcodec2_soft_ddpdec.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libcodec2_store_dolby.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcodec2_store_dolby.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libdapparamstorage.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdapparamstorage.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libdarwinn_dba_hal_runtime.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdarwinn_dba_hal_runtime.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libdarwinn_hal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdarwinn_hal.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libdeccfg.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdeccfg.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libdeeptouch.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdeeptouch.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libdisplaycolor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdisplaycolor.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libedgetpu_client.google.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libedgetpu_client.google.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libedgetpu_tflite_compiler.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libedgetpu_tflite_compiler.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libedgetpu_util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libedgetpu_util.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libfvsam_prm_parser.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfvsam_prm_parser.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libgc2_av1_dec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgc2_av1_dec.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libgc2_base.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgc2_base.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libgc2_cwl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgc2_cwl.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libgc2_log.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgc2_log.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libgc2_store.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgc2_store.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libgc2_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgc2_utils.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libgpudataproducer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgpudataproducer.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libgril_oem-google.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgril_oem-google.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libgxp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgxp.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libion_exynos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libion_exynos.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libmahalcontroller.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmahalcontroller.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libmetrics_logger.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmetrics_logger.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libnos_citadeld_proxy.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnos_citadeld_proxy.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/liboemcrypto.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liboemcrypto.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libqorvo_uwb_params_nfcc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqorvo_uwb_params_nfcc.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libsensorsuez.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensorsuez.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libsit_oem.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsit_oem.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libsit_oem_proto.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsit_oem_proto.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libspeech_waveformaec_runner.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libspeech_waveformaec_runner.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libstreset21.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstreset21.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libsueznanoappclients.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsueznanoappclients.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libtachyon_core.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtachyon_core.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libtouchflow.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtouchflow.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/libusf.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libusf.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/sensors.usf.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.usf.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/sideFpsSuez.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sideFpsSuez.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/soundfx/liboffloadeffect.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/liboffloadeffect.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/soundfx/libspatialaudio.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libspatialaudio.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/vendor-pixelatoms-cpp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor-pixelatoms-cpp.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/vendor.google.audiometricext@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.audiometricext@1.0.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/vendor.google.battery_mitigation-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.battery_mitigation-V1-ndk.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/vendor.google.battery_mitigation.service_static.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.battery_mitigation.service_static.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/vendor.google.bluetooth_ext-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.bluetooth_ext-V1-ndk.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/vendor.google.google_battery-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.google_battery-V3-ndk.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/vendor.google.whitechapel.audio.audioext@4.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.whitechapel.audio.audioext@4.0.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/vendor_chre_atoms_log.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor_chre_atoms_log.so \
-    vendor/google/tangorpro/proprietary/vendor/lib64/vendor_chre_metrics-cpp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor_chre_metrics-cpp.so
+    vendor/google/tangorpro/proprietary/vendor/firmware/syna/BTFW_B.hcd:$(TARGET_COPY_OUT_VENDOR)/firmware/syna/BTFW_B.hcd
 
 PRODUCT_PACKAGES += \
+    aoc_aud_ext \
+    aoc_audio_stereo_spatializer \
+    audio_adapted_info_features \
+    audio_amcs_ext \
+    audio_apmg3_aoc \
+    audio_bluenote_aoc \
+    audio_bt_aoc \
+    audio_cca_aoc \
+    audio_fortemedia_aoc \
+    audio_speech_enhancer_aoc \
+    audio_spk_35l41 \
+    audio_tunnel_aoc \
+    audio_usb_aoc \
+    audio_waves_aoc \
+    com.google.edgetpu_app_service-V3-ndk-vendor \
+    libGLES_mali \
+    gxp_metrics_logger \
+    audio.platform.aoc \
+    audio.primary.gs201 \
+    sound_trigger.primary.gs201 \
+    vendor.google.whitechapel.audio.audioext@4.0-impl \
+    vulkan.mali \
+    libAlgFx_HiFi3z \
+    libExynosC2ComponentStore \
+    libExynosC2H263Dec \
+    libExynosC2H263Enc \
+    libExynosC2H264Dec \
+    libExynosC2H264Enc \
+    libExynosC2HevcDec \
+    libExynosC2HevcEnc \
+    libExynosC2Mpeg4Dec \
+    libExynosC2Mpeg4Enc \
+    libExynosC2Vp8Dec \
+    libExynosC2Vp8Enc \
+    libExynosC2Vp9Dec \
+    libExynosC2Vp9Enc \
+    libOpenCL-pixel \
     libOpenCL \
+    lib_aion_buffer \
+    libadaptedinfo \
+    libamcsextfile \
+    libaoc \
+    libaoctuningdecoder \
+    libaocx \
+    libbo_av1 \
+    libc2filterplugin \
+    libcast_auth \
+    libcast_auth_aidl-cpp \
+    libdisplaycolor \
+    libedgetpu_client.google \
+    libedgetpu_util \
+    libfvsam_prm_parser \
+    libgc2_av1_dec \
+    libgc2_base \
+    libgc2_cwl \
+    libgc2_log \
+    libgc2_store \
+    libgc2_utils \
+    libgpudataproducer \
+    libion_exynos \
+    libmahalcontroller \
+    libmetrics_logger \
+    libqorvo_uwb_params_nfcc \
+    libsensorsuez \
+    libstreset21 \
+    libsueznanoappclients \
+    libusf \
+    sensors.usf \
+    liboffloadeffect \
+    libspatialaudio \
+    vendor-pixelatoms-cpp \
+    vendor.google.battery_mitigation-V1-ndk \
+    vendor.google.battery_mitigation.service_static \
+    vendor.google.whitechapel.audio.audioext@4.0 \
+    android.hardware.authsecret-impl.nos \
+    android.hardware.confirmationui.secure_input_citadel \
+    android.hardware.identity@1.0-impl.nos \
+    android.hardware.keymaster@4.1-impl.nos \
+    android.hardware.oemlock-impl.nos \
+    android.hardware.security.keymint-impl.nos \
+    android.hardware.weaver-bridge.nos \
+    android.hardware.weaver-impl.nos \
+    android.hardware.weaver2-impl.nos \
+    biometricsuez \
+    com.fingerprints42.extension@1.0 \
+    com.google.edgetpu.dba-V1-ndk \
+    com.google.edgetpu.tachyon-V1-ndk \
+    com.google.edgetpu_vendor_service-V2-ndk-vendor \
+    com.google.hardware.biometrics.parcelable.fingerprint.PressToAuthParcelable-V1-ndk \
+    com.google.hardware.biometrics.sidefps.fingerprint-ext-V1-ndk \
+    com.google.input-V2-ndk \
+    com.google.input-V3-ndk \
+    fake_gxp_telemetry_reader \
+    fpc42_suez \
+    fpc_util \
+    gxp_telemetry_reader \
+    fingerprint.fpc \
+    lib_reader \
+    libcodec2_soft_ddpdec \
+    libcodec2_store_dolby \
+    libdapparamstorage \
+    libdarwinn_dba_hal_runtime \
+    libdarwinn_hal \
+    libdeccfg \
+    libdeeptouch \
+    libedgetpu_tflite_compiler \
+    libgril_oem-google \
+    libgxp \
+    libnos_citadeld_proxy \
+    liboemcrypto \
+    libsit_oem \
+    libsit_oem_proto \
+    libspeech_waveformaec_runner \
+    libtachyon_core \
+    libtouchflow \
+    sideFpsSuez \
+    vendor.google.audiometricext@1.0 \
+    vendor.google.bluetooth_ext-V1-ndk \
+    vendor.google.google_battery-V3-ndk \
+    vendor_chre_atoms_log \
+    vendor_chre_metrics-cpp \
     com.google.android.widevine-wv_341113000 \
     com.google.pixel.camera.hal \
     com.google.pixel.wifi.ext \
@@ -479,4 +369,40 @@ PRODUCT_PACKAGES += \
     vendor.dolby.media.c2@1.0-service \
     vendor.google.battery_mitigation-default \
     vendor.google.edgetpu_vendor_service@1.0-service \
-    vendor.google.google_battery-default
+    vendor.google.google_battery-default \
+    aocd \
+    aocxd \
+    android.hardware.authsecret-service.citadel \
+    android.hardware.biometrics.fingerprint-service.fpc42 \
+    android.hardware.bluetooth@1.1-service.synabtlinux \
+    android.hardware.confirmationui-service.trusty.vendor \
+    android.hardware.contexthub-service.generic \
+    android.hardware.edgetpu.logging@service-edgetpu-logging \
+    android.hardware.gxp.logging@service-gxp-logging \
+    android.hardware.identity@1.0-service.citadel \
+    android.hardware.input.processor-service \
+    android.hardware.neuralnetworks@service-darwinn-aidl \
+    android.hardware.oemlock-service.citadel \
+    android.hardware.qorvo.uwb.service \
+    android.hardware.security.keymint-service.citadel \
+    android.hardware.weaver-service.citadel \
+    battery_mitigation \
+    citadel_updater \
+    citadeld \
+    com.google.edgetpu.dba-service \
+    com.google.edgetpu.tachyon-service \
+    google.hardware.media.c2@1.0-service \
+    init_citadel \
+    samsung.hardware.media.c2@1.2-service \
+    vendor.dolby.media.c2@1.0-service \
+    vendor.google.audiometricext@1.0-service-vendor \
+    vendor.google.edgetpu_vendor_service@1.0-service \
+    vendor.google.google_battery-service \
+    vendor.google.radioext@1.0-service \
+    init.camera.set-interrupts-ownership \
+    securedpud.slider \
+    sscoredump \
+    trusty_metricsd \
+    twoshay \
+    umfw_stat_tool \
+    usf_stats
