@@ -1,0 +1,5 @@
+service synabtlinux-1.1 /vendor/bin/hw/android.hardware.bluetooth@1.1-service.synabtlinux
+    class hal
+    user bluetooth
+    group bluetooth net_admin net_bt_admin system
+    capabilities NET_ADMIN

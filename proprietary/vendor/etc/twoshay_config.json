@@ -1,0 +1,67 @@
+{
+	"pipelines": [
+		{
+			"name": "default",
+			"device": "/dev/touch_offload",
+			"algorithms": [
+				{
+					"class": "SegmentationAlgorithm",
+					"name": "segmentation"
+				},
+				{
+					"class": "GripSuppressionAlgorithm",
+					"name": "grip_suppression",
+					"blocked_by": ["segmentation"],
+					"parameters": {
+						"gripEnableCancel": true,
+						"palmEnableCancel": true,
+					}
+				},
+				{
+					"class": "TouchflowAlgorithm",
+					"name": "touchflow",
+					"blocked_by": ["grip_suppression"],
+				},
+                                {
+                                        "class": "StylusPalmAlgorithm",
+                                        "name": "stylus_palm_suppression",
+                                        "blocked_by": ["touchflow"],
+                                        "parameters": {
+                                                "enable_cancel": true,
+                                                "enable_debug_log": true,
+                                                "operation_mode": 1,
+                                                "decision_threshold_0": 0.3,
+                                                "decision_threshold_1": 0.15,
+                                                "decision_threshold_2": 0.0,
+                                                "threshold_decrease_edge_0": 0.1,
+						"threshold_decrease_edge_1": 0.4,
+						"threshold_decrease_edge_2": 0.6,
+                                                "threshold_decrease_multiple_blobs_0": 0.1,
+						"threshold_decrease_multiple_blobs_1": 0.4,
+						"threshold_decrease_multiple_blobs_2": 0.5,
+                                                "finger_threshold_margin": 0.4,
+                                                "palm_threshold_margin": 0.6,
+                                                "landed_time_threshold": 0.1,
+                                                "confident_finger_threshold_0": 0.1,
+                                                "confident_finger_threshold_1": 0.0,
+                                                "confident_finger_threshold_2": -0.1,
+                                                "confident_palm_threshold_0": 4.0,
+                                                "confident_palm_threshold_1": 1.5,
+                                                "confident_palm_threshold_2": 1.0,
+                                                "continuous_active_time_sec": 10
+                                        }
+                                },
+				{
+					"class": "ReportingAlgorithm",
+					"name": "reporting",
+					"blocked_by": ["stylus_palm_suppression"],
+				},
+				{
+					"class": "TouchSuezAlgorithm",
+					"name": "touchsuez",
+					"blocked_by": ["reporting"],
+				}
+			],
+		}
+	]
+}

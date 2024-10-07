@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- These are configurations that should exist on Google's 2022 and newer Pixel devices with docks. -->
+<config>
+    <!-- Allow the DockManager to maintain USB communicatio nwith the dock in background -->
+    <allow-in-power-save package="com.google.android.apps.nest.dockmanager.app" />
+</config>

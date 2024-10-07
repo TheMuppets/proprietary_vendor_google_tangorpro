@@ -1,0 +1,12 @@
+{ "source_dir": "/vendor/etc/chre",
+  "nanoapps": [
+    "activity",
+    "ambient_volume",
+    "drop",
+    "health",
+    "imu_cal",
+    "motiondetector",
+    "sd",
+    "system_signal_hub",
+    "uv_exposure"
+]}

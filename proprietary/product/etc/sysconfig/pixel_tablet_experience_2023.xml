@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- These are configurations that should exist on Google's Tablet 2023 and newer tablet devices. -->
+<config>
+    <!-- This is meant to be the canonical feature identifying 2023 tablet and newer tablet devices. -->
+    <feature name="com.google.android.feature.PIXEL_TABLET_2023_EXPERIENCE" />
+</config>

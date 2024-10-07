@@ -1,0 +1,53 @@
+#!/system/bin/sh
+#
+# Copyright 2022 Google LLC. All Rights Reserved.
+#
+# Tangotron Calibration Sub-Script.
+#
+# Contains T6PRO-specific sensor information for sensor_cal.
+
+# Sensors supported for calibration.
+SUPPORTED_SENSORS="accel als gyro imu_temp"
+
+#######################################
+# Converts a sensor name to its path.
+# Globals:
+#   CAL_PARAMS
+#   SENSOR
+#   SENSOR_NAME
+#   SENSOR_PATH
+# Arguments:
+#   None
+# Outputs:
+#   Saves the sensor path in SENSOR_PATH.
+#   Logging based on set VERBOSITY level.
+#######################################
+sensor_cal::sensor_to_path() {
+  if [[ "${SENSOR}" == "accel" ]]; then
+    SENSOR_PATH="/fac_cal/dev/lsm6dsr/0/accel"
+    SENSOR_NAME="lsm6dsr"
+    # Add "avg_odr_26" in addition to the original parameters.
+    CAL_PARAMS+=" avg_odr_26"
+  elif [[ "${SENSOR}" == "als" ]]; then
+    SENSOR_PATH="/fac_cal/dev/tcs3410/0/als"
+    SENSOR_NAME="tcs3410"
+    CAL_PARAMS=" \
+    r_gain10 g_gain10 b_gain10 c_gain10 w_gain10 \
+    r_gain12 g_gain12 b_gain12 c_gain12 w_gain12 \
+    r_gain13 g_gain13 b_gain13 c_gain13 w_gain13 \
+    lux_scale cct_scale"
+  elif [[ "${SENSOR}" == "gyro" ]]; then
+    SENSOR_PATH="/fac_cal/dev/lsm6dsr/0/gyro"
+    SENSOR_NAME="lsm6dsr"
+    # Add "avg_odr_26" in addition to the original parameters.
+    CAL_PARAMS+=" avg_odr_26"
+  elif [[ "${SENSOR}" == "imu_temp" ]]; then
+    SENSOR_PATH="/fac_cal/dev/lsm6dsr/0/temp"
+    SENSOR_NAME="lsm6dsr"
+  else
+    sensor_cal::ERROR "Unknown or unimplemented sensor: ${SENSOR}"
+    sensor_cal::exit_badparam
+  fi
+
+  sensor_cal::DEBUG "Registry path: ${SENSOR_PATH}"
+}
