@@ -74,4 +74,8 @@
 
     <!-- Corresponds to PackageManager.FEATURE_WALLET_LOCATION_BASED_SUGGESTIONS. -->
     <feature name="android.software.wallet_location_based_suggestions" />
+
+    <!-- Temporary feature corresponding to support for dragging the assistant into
+         splitscreen, b/350016003 -->
+    <feature name="com.android.systemui.SUPPORTS_DRAG_ASSISTANT_TO_SPLIT" />
 </config>
