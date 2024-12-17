@@ -1,5 +1,0 @@
-service vendor.confirmationui_default /vendor/bin/hw/android.hardware.confirmationui-service.trusty.vendor
-    interface aidl android.hardware.confirmationui.IConfirmationUI/default
-    class hal
-    user nobody
-    group drmrpc input

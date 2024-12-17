@@ -100,3 +100,4 @@ service vendor.battery_mitigation /vendor/bin/hw/battery_mitigation
     group system
     priority -20
     capabilities WAKE_ALARM BLOCK_SUSPEND
+    writepid /dev/cpuset/system-background/tasks

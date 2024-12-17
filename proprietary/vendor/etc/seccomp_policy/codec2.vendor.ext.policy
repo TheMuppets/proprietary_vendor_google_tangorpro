@@ -14,11 +14,6 @@
 eventfd: 1
 eventfd2: 1
 mmap: 1
-getuid: 1
-fstat: 1
-fstatfs: 1
-newfstatat: 1
-getrlimit: 1
 epoll_create1:1
 epoll_ctl:1
 epoll_wait:1

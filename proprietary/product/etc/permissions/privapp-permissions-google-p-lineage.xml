@@ -62,8 +62,10 @@ It allows additional grants on top of privapp-permissions-platform.xml
     <privapp-permissions package="com.google.android.apps.betterbug">
         <permission name="android.permission.DUMP"/>
         <permission name="android.permission.INTERACT_ACROSS_USERS"/>
+        <permission name="android.permission.MANAGE_USERS"/>
         <permission name="android.permission.PACKAGE_USAGE_STATS"/>
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+        <permission name="android.permission.READ_DROPBOX_DATA"/>
         <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
         <permission name="android.permission.READ_LOGS"/>
         <permission name="android.permission.START_FOREGROUND_SERVICES_FROM_BACKGROUND"/>
@@ -72,8 +74,10 @@ It allows additional grants on top of privapp-permissions-platform.xml
     <privapp-permissions package="com.google.android.apps.internal.betterbug">
         <permission name="android.permission.DUMP"/>
         <permission name="android.permission.INTERACT_ACROSS_USERS"/>
+        <permission name="android.permission.MANAGE_USERS"/>
         <permission name="android.permission.PACKAGE_USAGE_STATS"/>
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+        <permission name="android.permission.READ_DROPBOX_DATA"/>
         <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
         <permission name="android.permission.READ_LOGS"/>
         <permission name="android.permission.START_FOREGROUND_SERVICES_FROM_BACKGROUND"/>
@@ -84,8 +88,10 @@ It allows additional grants on top of privapp-permissions-platform.xml
     <privapp-permissions package="com.google.android.apps.betterbug.partners">
         <permission name="android.permission.DUMP"/>
         <permission name="android.permission.INTERACT_ACROSS_USERS"/>
+        <permission name="android.permission.MANAGE_USERS"/>
         <permission name="android.permission.PACKAGE_USAGE_STATS"/>
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+        <permission name="android.permission.READ_DROPBOX_DATA"/>
         <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
         <permission name="android.permission.READ_LOGS"/>
     </privapp-permissions>
@@ -147,6 +153,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
 
     <privapp-permissions package="com.google.android.apps.scone">
         <permission name="android.permission.ACCESS_CONTEXT_HUB"/>
+        <permission name="android.permission.BLUETOOTH_PRIVILEGED"/>
         <permission name="android.permission.CONTROL_INCALL_EXPERIENCE"/>
         <permission name="android.permission.DUMP"/>
         <permission name="android.permission.INTERACT_ACROSS_USERS"/>
@@ -188,6 +195,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.MANAGE_USB"/>
         <permission name="android.permission.MODIFY_DEFAULT_AUDIO_EFFECTS"/>
         <permission name="android.permission.READ_SYSTEM_GRAMMATICAL_GENDER"/>
+        <permission name="android.permission.MODIFY_AUDIO_ROUTING"/>
     </privapp-permissions>
 
     <privapp-permissions package="com.google.android.apps.pixel.ensemble">
@@ -427,6 +435,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.DUMP"/>
         <permission name="android.permission.PACKAGE_USAGE_STATS"/>
         <permission name="android.permission.POWER_SAVER"/>
+        <permission name="android.permission.REAL_GET_TASKS"/>
         <permission name="android.permission.SUBSTITUTE_NOTIFICATION_APP_NAME"/>
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
         <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
@@ -631,6 +640,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.MANAGE_USB"/>
         <permission name="android.permission.MODIFY_AUDIO_ROUTING"/>
         <permission name="android.permission.MODIFY_DAY_NIGHT_MODE"/>
+        <permission name="android.permission.MODIFY_PHONE_STATE"/>
         <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
         <permission name="android.permission.REQUEST_COMPANION_SELF_MANAGED"/>
         <permission name="android.permission.SCHEDULE_EXACT_ALARM"/>
@@ -642,6 +652,7 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.BIND_APPWIDGET"/>
         <permission name="android.permission.CALL_PRIVILEGED"/>
         <permission name="android.permission.CAPTURE_AUDIO_HOTWORD"/>
+        <permission name="android.permission.CAPTURE_AUDIO_OUTPUT"/>
         <permission name="android.permission.CAPTURE_MEDIA_OUTPUT"/>
         <permission name="android.permission.CONTROL_INCALL_EXPERIENCE" />
         <permission name="android.permission.ENTER_CAR_MODE_PRIORITIZED" />
@@ -797,22 +808,28 @@ It allows additional grants on top of privapp-permissions-platform.xml
     </privapp-permissions>
 
     <privapp-permissions package="com.google.android.retaildemo">
-        <permission name="android.permission.INSTALL_PACKAGES"/>
-        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
-        <permission name="android.permission.MANAGE_USERS"/>
-        <permission name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"/>
-        <permission name="android.permission.SET_TIME_ZONE"/>
-        <permission name="android.permission.REAL_GET_TASKS"/>
         <permission name="android.permission.ACCESS_BLOBS_ACROSS_USERS"/>
+        <permission name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"/>
         <permission name="android.permission.CHANGE_CONFIGURATION"/>
+        <!-- Required to reset Settings navigation mode b/351284030. -->
+        <permission name="android.permission.CHANGE_OVERLAY_PACKAGES"/>
+        <!-- Required to uninstall packages b/351949347. -->
+        <permission name="android.permission.DELETE_PACKAGES"/>
+        <permission name="android.permission.INSTALL_PACKAGES"/>
+        <!-- Required to start activity as user in HSUM b/361242510 -->
+        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
+        <permission name="android.permission.MANAGE_USERS"/>
         <permission name="android.permission.MODIFY_DAY_NIGHT_MODE"/>
         <permission name="android.permission.MODIFY_PHONE_STATE"/>
         <permission name="android.permission.OBSERVE_APP_USAGE"/>
         <permission name="android.permission.PACKAGE_USAGE_STATS"/>
         <permission name="android.permission.QUERY_USERS"/>
         <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+        <permission name="android.permission.REAL_GET_TASKS"/>
+        <permission name="android.permission.SET_TIME_ZONE"/>
         <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
         <permission name="android.permission.START_FOREGROUND_SERVICES_FROM_BACKGROUND"/>
+        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
     </privapp-permissions>
 
     <privapp-permissions package="com.google.android.apps.retaildemo.preload">
@@ -863,6 +880,8 @@ It allows additional grants on top of privapp-permissions-platform.xml
 
     <!-- go/overlay. Installed only on userdebug/eng builds. -->
     <privapp-permissions package="com.google.android.apps.overlay">
+        <!-- Used for communication with NanoApp. http://b/345490170 -->
+        <permission name="android.permission.ACCESS_CONTEXT_HUB"/>
         <!-- Used only for internal prototyping. http://b/273973518 -->
         <permission name="android.permission.PACKAGE_USAGE_STATS"/>
         <!-- Used to hand-off face-auth data-collection consent to Work Profile; http://b/243410915#comment19 -->
