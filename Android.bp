@@ -291,6 +291,17 @@ android_app_import {
 }
 
 android_app_import {
+    name: "PersistentBackgroundCameraServices",
+    owner: "google",
+    apk: "proprietary/system_ext/app/PersistentBackgroundCameraServices/PersistentBackgroundCameraServices.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    system_ext_specific: true,
+}
+
+android_app_import {
     name: "ConnectivityThermalPowerManager",
     owner: "google",
     apk: "proprietary/system_ext/priv-app/ConnectivityThermalPowerManager/ConnectivityThermalPowerManager.apk",
@@ -390,11 +401,47 @@ dex_import {
 }
 
 dex_import {
+    name: "com.google.pixel.camera.connectivity",
+    owner: "google",
+    jars: [
+        "proprietary/system_ext/framework/com.google.pixel.camera.connectivity.jar",
+    ],
+    system_ext_specific: true,
+}
+
+dex_import {
+    name: "com.google.pixel.camera.services.cameraidremapper",
+    owner: "google",
+    jars: [
+        "proprietary/system_ext/framework/com.google.pixel.camera.services.cameraidremapper.jar",
+    ],
+    system_ext_specific: true,
+}
+
+dex_import {
+    name: "com.google.pixel.camera.services.lyricconfigprovider",
+    owner: "google",
+    jars: [
+        "proprietary/system_ext/framework/com.google.pixel.camera.services.lyricconfigprovider.jar",
+    ],
+    system_ext_specific: true,
+}
+
+dex_import {
     name: "google-ril",
     owner: "google",
     jars: [
         "proprietary/system_ext/framework/google-ril.jar",
     ],
+    system_ext_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "com.google.pixel.camera.services@1.0-service-google.xml",
+    owner: "google",
+    src: "proprietary/system_ext/etc/vintf/manifest/com.google.pixel.camera.services@1.0-service-google.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
     system_ext_specific: true,
 }
 
