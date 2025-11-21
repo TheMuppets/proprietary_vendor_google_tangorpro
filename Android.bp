@@ -116,9 +116,9 @@ android_app_import {
 }
 
 android_app_import {
-    name: "DeviceIntelligenceNetworkPrebuilt-astrea_20240329.00_RC02",
+    name: "DeviceIntelligenceNetworkPrebuilt-bfinal_astrea_20250217.00_RC00",
     owner: "google",
-    apk: "proprietary/product/priv-app/DeviceIntelligenceNetworkPrebuilt-astrea_20240329.00_RC02/DeviceIntelligenceNetworkPrebuilt-astrea_20240329.00_RC02.apk",
+    apk: "proprietary/product/priv-app/DeviceIntelligenceNetworkPrebuilt-bfinal_astrea_20250217.00_RC00/DeviceIntelligenceNetworkPrebuilt-bfinal_astrea_20250217.00_RC00.apk",
     preprocessed: true,
     presigned: true,
     dex_preopt: {
@@ -1219,7 +1219,7 @@ cc_prebuilt_library_shared {
                 "libhardware",
                 "libdmabufheap",
                 "libz",
-                "android.hardware.graphics.common-V6-ndk",
+                "android.hardware.graphics.common-V7-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -1246,7 +1246,7 @@ cc_prebuilt_library_shared {
                 "libhardware",
                 "libdmabufheap",
                 "libz",
-                "android.hardware.graphics.common-V6-ndk",
+                "android.hardware.graphics.common-V7-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -1450,7 +1450,7 @@ cc_prebuilt_library_shared {
                 "arm.graphics-V1-ndk",
                 "libhidlbase",
                 "libcutils",
-                "android.hardware.graphics.common-V6-ndk",
+                "android.hardware.graphics.common-V7-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -1475,7 +1475,7 @@ cc_prebuilt_library_shared {
                 "arm.graphics-V1-ndk",
                 "libhidlbase",
                 "libcutils",
-                "android.hardware.graphics.common-V6-ndk",
+                "android.hardware.graphics.common-V7-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -2768,7 +2768,7 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libutils",
                 "libacryl_hdr_plugin",
-                "android.hardware.graphics.common-V6-ndk",
+                "android.hardware.graphics.common-V7-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -2785,7 +2785,7 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libutils",
                 "libacryl_hdr_plugin",
-                "android.hardware.graphics.common-V6-ndk",
+                "android.hardware.graphics.common-V7-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -3912,43 +3912,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libion_exynos",
-    owner: "google",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libion_exynos.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libion_exynos.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libion_google",
     owner: "google",
     strip: {
@@ -4256,7 +4219,7 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "android.frameworks.stats-V2-ndk",
-                "android.hardware.contexthub-V3-ndk",
+                "android.hardware.contexthub-V4-ndk",
                 "libaconfig_storage_read_api_cc",
                 "libbase",
                 "libbinder_ndk",
@@ -4276,7 +4239,7 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "android.frameworks.stats-V2-ndk",
-                "android.hardware.contexthub-V3-ndk",
+                "android.hardware.contexthub-V4-ndk",
                 "libaconfig_storage_read_api_cc",
                 "libbase",
                 "libbinder_ndk",
@@ -4373,7 +4336,7 @@ cc_prebuilt_library_shared {
                 "android.hardware.graphics.mapper@4.0",
                 "libgralloctypes",
                 "libhidlbase",
-                "android.hardware.graphics.common-V6-ndk",
+                "android.hardware.graphics.common-V7-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -4401,7 +4364,7 @@ cc_prebuilt_library_shared {
                 "android.hardware.graphics.mapper@4.0",
                 "libgralloctypes",
                 "libhidlbase",
-                "android.hardware.graphics.common-V6-ndk",
+                "android.hardware.graphics.common-V7-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -4428,7 +4391,8 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "android.frameworks.stats-V2-ndk",
                 "android.hardware.common-V2-ndk",
-                "com.google.hardware.pixel.display-V9-ndk",
+                "com.google.hardware.pixel.display-V15-ndk",
+                "vendor.google.whitechapel.audio.extension-V5-ndk",
                 "libaoc",
                 "libbinder_ndk",
                 "libhidltransport",
@@ -4460,7 +4424,8 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "android.frameworks.stats-V2-ndk",
                 "android.hardware.common-V2-ndk",
-                "com.google.hardware.pixel.display-V9-ndk",
+                "com.google.hardware.pixel.display-V15-ndk",
+                "vendor.google.whitechapel.audio.extension-V5-ndk",
                 "libaoc",
                 "libbinder_ndk",
                 "libhidltransport",
@@ -4622,7 +4587,6 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/vendor.google.battery_mitigation.service_static.so",
             ],
             shared_libs: [
-                "libaconfig_storage_read_api_cc",
                 "libbase",
                 "libbinder_ndk",
                 "libcutils",
@@ -4632,6 +4596,7 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "vendor.google.battery_mitigation-V1-ndk",
                 "server_configurable_flags",
+                "libaconfig_storage_read_api_cc",
                 "libc++",
                 "libc",
                 "libm",
@@ -4643,7 +4608,6 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/vendor.google.battery_mitigation.service_static.so",
             ],
             shared_libs: [
-                "libaconfig_storage_read_api_cc",
                 "libbase",
                 "libbinder_ndk",
                 "libcutils",
@@ -4653,6 +4617,7 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "vendor.google.battery_mitigation-V1-ndk",
                 "server_configurable_flags",
+                "libaconfig_storage_read_api_cc",
                 "libc++",
                 "libc",
                 "libm",
@@ -4696,6 +4661,43 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libutils",
                 "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.google.whitechapel.audio.extension-V5-ndk",
+    owner: "google",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/vendor.google.whitechapel.audio.extension-V5-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.google.whitechapel.audio.extension-V5-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -4960,6 +4962,7 @@ cc_prebuilt_library_shared {
                 "libbase",
                 "libbinder_ndk",
                 "liblog",
+                "libcutils",
                 "libc++",
                 "libc",
                 "libm",
@@ -5130,7 +5133,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.google.input-V5-ndk",
+    name: "com.google.input-V6-ndk",
     owner: "google",
     strip: {
         none: true,
@@ -5138,7 +5141,7 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/com.google.input-V5-ndk.so",
+                "proprietary/vendor/lib64/com.google.input-V6-ndk.so",
             ],
             shared_libs: [
                 "libbinder_ndk",
@@ -5315,15 +5318,15 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/hw/fingerprint.fpc.so",
             ],
             shared_libs: [
-                "liblog",
-                "libutils",
+                "com.fingerprints42.extension@1.0",
+                "fpc_util",
                 "libcutils",
                 "libhidlbase",
                 "libhidltransport",
-                "com.fingerprints42.extension@1.0",
-                "fpc_util",
-                "fpc42_suez",
+                "liblog",
+                "libutils",
                 "server_configurable_flags",
+                "fpc42_suez",
                 "libaconfig_storage_read_api_cc",
                 "libtrusty",
                 "libc++",
@@ -5362,7 +5365,7 @@ cc_prebuilt_library_shared {
                 "android.hardware.graphics.mapper@2.0",
                 "android.hardware.graphics.composer3-V4-ndk",
                 "android.hardware.drm-V1-ndk",
-                "com.google.hardware.pixel.display-V15-ndk",
+                "com.google.hardware.pixel.display-V16-ndk",
                 "android.frameworks.stats-V2-ndk",
                 "libpixelatoms_defs",
                 "pixelatoms-cpp",
@@ -5393,10 +5396,10 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/lib_reader.so",
             ],
             shared_libs: [
+                "libdl",
                 "liblog",
                 "libc",
                 "libm",
-                "libdl",
             ],
         },
     },
@@ -5683,7 +5686,7 @@ cc_prebuilt_library_shared {
                 "pixel_stateresidency_provider_aidl_interface-ndk",
                 "android.hardware.graphics.composer3-V4-ndk",
                 "android.hardware.drm-V1-ndk",
-                "com.google.hardware.pixel.display-V15-ndk",
+                "com.google.hardware.pixel.display-V16-ndk",
                 "android.frameworks.stats-V2-ndk",
                 "libpixelatoms_defs",
                 "pixelatoms-cpp",
@@ -6112,7 +6115,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.google.google_battery-V3-ndk",
+    name: "vendor.google.google_battery-V4-ndk",
     owner: "google",
     strip: {
         none: true,
@@ -6120,7 +6123,7 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/vendor.google.google_battery-V3-ndk.so",
+                "proprietary/vendor/lib64/vendor.google.google_battery-V4-ndk.so",
             ],
             shared_libs: [
                 "libbinder_ndk",
@@ -6276,15 +6279,6 @@ prebuilt_etc_xml {
     name: "android.hardware.weaver-service.citadel.xml",
     owner: "google",
     src: "proprietary/vendor/etc/vintf/manifest/android.hardware.weaver-service.citadel.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
-    name: "com.google.edgetpu.tachyon-service.xml",
-    owner: "google",
-    src: "proprietary/vendor/etc/vintf/manifest/com.google.edgetpu.tachyon-service.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
@@ -6610,7 +6604,7 @@ cc_prebuilt_binary {
                 "android.hardware.graphics.composer@2.2-resources",
                 "android.hardware.graphics.composer@2.4",
                 "android.hardware.drm-V1-ndk",
-                "com.google.hardware.pixel.display-V15-ndk",
+                "com.google.hardware.pixel.display-V16-ndk",
                 "android.frameworks.stats-V2-ndk",
                 "libpixelatoms_defs",
                 "pixelatoms-cpp",
@@ -7069,7 +7063,6 @@ cc_prebuilt_binary {
                 "proprietary/vendor/bin/hw/battery_mitigation",
             ],
             shared_libs: [
-                "libaconfig_storage_read_api_cc",
                 "libbase",
                 "libbinder_ndk",
                 "libcutils",
@@ -7081,6 +7074,7 @@ cc_prebuilt_binary {
                 "server_configurable_flags",
                 "android.hardware.thermal@2.0",
                 "android.hardware.thermal-V1-ndk",
+                "libaconfig_storage_read_api_cc",
                 "libc++",
                 "libc",
                 "libm",
@@ -7106,11 +7100,11 @@ cc_prebuilt_binary {
                 "proprietary/vendor/bin/hw/citadel_updater",
             ],
             shared_libs: [
-                "libcrypto",
                 "libnos",
-                "libnos_citadeld_proxy",
                 "libnos_client_citadel",
+                "libnos_citadeld_proxy",
                 "libutils",
+                "libcrypto",
                 "libc++",
                 "libc",
                 "libm",
@@ -7409,7 +7403,7 @@ cc_prebuilt_binary {
             shared_libs: [
                 "libbase",
                 "libbinder_ndk",
-                "vendor.google.google_battery-V3-ndk",
+                "vendor.google.google_battery-V4-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -7569,7 +7563,7 @@ cc_prebuilt_binary {
                 "proprietary/vendor/bin/twoshay",
             ],
             shared_libs: [
-                "com.google.input-V5-ndk",
+                "com.google.input-V6-ndk",
                 "libbase",
                 "libbinder",
                 "libcrypto",

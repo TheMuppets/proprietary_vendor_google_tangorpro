@@ -63,7 +63,7 @@ PRODUCT_PACKAGES += \
     libhbmsvmanager_jni \
     AndroidMediaShell \
     CastAuthPrebuilt \
-    DeviceIntelligenceNetworkPrebuilt-astrea_20240329.00_RC02 \
+    DeviceIntelligenceNetworkPrebuilt-bfinal_astrea_20250217.00_RC00 \
     DevicePersonalizationPrebuiltPixelTablet2023-bfinal_aiai_20250217.00_RC08 \
     DockManagerPrebuilt \
     HardwareInfo \
@@ -203,8 +203,6 @@ PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/vendor/firmware/gxp_fw_core2:$(TARGET_COPY_OUT_VENDOR)/firmware/gxp_fw_core2 \
     vendor/google/tangorpro/proprietary/vendor/firmware/gxp_fw_core3:$(TARGET_COPY_OUT_VENDOR)/firmware/gxp_fw_core3 \
     vendor/google/tangorpro/proprietary/vendor/firmware/logstrs.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/logstrs.bin \
-    vendor/google/tangorpro/proprietary/vendor/firmware/mali_csffw-r50p0.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mali_csffw-r50p0.bin \
-    vendor/google/tangorpro/proprietary/vendor/firmware/mali_csffw-r51p0.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mali_csffw-r51p0.bin \
     vendor/google/tangorpro/proprietary/vendor/firmware/mali_csffw-r52p0.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mali_csffw-r52p0.bin \
     vendor/google/tangorpro/proprietary/vendor/firmware/mali_csffw-r53p0.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mali_csffw-r53p0.bin \
     vendor/google/tangorpro/proprietary/vendor/firmware/mali_csffw-r54p0.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mali_csffw-r54p0.bin \
@@ -284,7 +282,6 @@ PRODUCT_PACKAGES += \
     libgc2_utils \
     libgpudataproducer \
     libhwjpeg \
-    libion_exynos \
     libion_google \
     libmahalcontroller \
     libmetrics_logger \
@@ -301,6 +298,7 @@ PRODUCT_PACKAGES += \
     vendor.google.battery_mitigation-V1-ndk \
     vendor.google.battery_mitigation.service_static \
     vendor.google.whitechapel.audio.audioext@4.0 \
+    vendor.google.whitechapel.audio.extension-V5-ndk \
     android.hardware.authsecret-impl.nos \
     android.hardware.oemlock-impl.nos \
     android.hardware.security.keymint-impl.nos \
@@ -315,7 +313,7 @@ PRODUCT_PACKAGES += \
     com.google.hardware.biometrics.parcelable.fingerprint.PressToAuthParcelable-V1-ndk \
     com.google.hardware.biometrics.sidefps.fingerprint-ext-V1-ndk \
     com.google.input-V2-ndk \
-    com.google.input-V5-ndk \
+    com.google.input-V6-ndk \
     fake_gxp_telemetry_reader \
     fpc42_suez \
     fpc_util \
@@ -349,7 +347,7 @@ PRODUCT_PACKAGES += \
     vendor-pixelatoms-cpp \
     vendor.google.audiometricext@1.0 \
     vendor.google.bluetooth_ext-V1-ndk \
-    vendor.google.google_battery-V3-ndk \
+    vendor.google.google_battery-V4-ndk \
     vendor_chre_atoms_log \
     vendor_chre_metrics-cpp \
     com.google.android.widevine-13130248 \
@@ -363,7 +361,6 @@ PRODUCT_PACKAGES += \
     android.hardware.oemlock-service.citadel.xml \
     android.hardware.security.keymint-service.citadel.xml \
     android.hardware.weaver-service.citadel.xml \
-    com.google.edgetpu.tachyon-service.xml \
     fingerprint-fpc42.xml \
     hwc3-default.xml \
     manifest.xml \
