@@ -45,6 +45,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/recovery/root/vendor/firmware/novatek_ts_fw_csot.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/novatek_ts_fw_csot.bin \
     vendor/google/tangorpro/proprietary/recovery/root/vendor/firmware/novatek_ts_mp.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/novatek_ts_mp.bin \
     vendor/google/tangorpro/proprietary/recovery/root/vendor/firmware/novatek_ts_mp_csot.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/novatek_ts_mp_csot.bin \
+    vendor/google/tangorpro/proprietary/system_ext/etc/init/init.gs_watchdogd.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.gs_watchdogd.rc \
     vendor/google/tangorpro/proprietary/system_ext/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc \
     vendor/google/tangorpro/proprietary/system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.hotwordenrollment.common.util.xml \
     vendor/google/tangorpro/proprietary/system_ext/etc/permissions/com.google.android.camera.extensions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.google.android.camera.extensions.xml \
@@ -89,6 +90,7 @@ PRODUCT_PACKAGES += \
     google-ril \
     com.google.pixel.camera.services@1.0-service-google.xml \
     vendor.google.edgetpu_app_service@1.0-service.xml \
+    gs_watchdogd \
     vendor.google.edgetpu_app_service@1.0-service
 
 PRODUCT_PACKAGES += \
@@ -96,8 +98,46 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/vendor/etc/Khronos/OpenCL/vendors/ARM.icd:$(TARGET_COPY_OUT_VENDOR)/etc/Khronos/OpenCL/vendors/ARM.icd \
+    vendor/google/tangorpro/proprietary/vendor/etc/aoc/BLUETOOTH.dat:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/BLUETOOTH.dat \
+    vendor/google/tangorpro/proprietary/vendor/etc/aoc/HANDSET.dat:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/HANDSET.dat \
+    vendor/google/tangorpro/proprietary/vendor/etc/aoc/HANDSFREE.dat:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/HANDSFREE.dat \
+    vendor/google/tangorpro/proprietary/vendor/etc/aoc/HEADSET.dat:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/HEADSET.dat \
+    vendor/google/tangorpro/proprietary/vendor/etc/aoc/downlink_bluetooth_headset_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/downlink_bluetooth_headset_config.pb \
+    vendor/google/tangorpro/proprietary/vendor/etc/aoc/downlink_dock_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/downlink_dock_config.pb \
+    vendor/google/tangorpro/proprietary/vendor/etc/aoc/downlink_external_speaker_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/downlink_external_speaker_config.pb \
+    vendor/google/tangorpro/proprietary/vendor/etc/aoc/downlink_handset_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/downlink_handset_config.pb \
+    vendor/google/tangorpro/proprietary/vendor/etc/aoc/downlink_speaker_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/downlink_speaker_config.pb \
+    vendor/google/tangorpro/proprietary/vendor/etc/aoc/downlink_wired_headset_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/downlink_wired_headset_config.pb \
+    vendor/google/tangorpro/proprietary/vendor/etc/aoc/mcps.dat:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/mcps.dat \
+    vendor/google/tangorpro/proprietary/vendor/etc/aoc/recording.gatf:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/recording.gatf \
+    vendor/google/tangorpro/proprietary/vendor/etc/aoc/smartfeature.gstf:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/smartfeature.gstf \
+    vendor/google/tangorpro/proprietary/vendor/etc/aoc/uplink_bluetooth_headset_aec_off_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_bluetooth_headset_aec_off_config.pb \
+    vendor/google/tangorpro/proprietary/vendor/etc/aoc/uplink_bluetooth_headset_aec_on_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_bluetooth_headset_aec_on_config.pb \
+    vendor/google/tangorpro/proprietary/vendor/etc/aoc/uplink_dock_aec_off_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_dock_aec_off_config.pb \
+    vendor/google/tangorpro/proprietary/vendor/etc/aoc/uplink_dock_aec_on_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_dock_aec_on_config.pb \
+    vendor/google/tangorpro/proprietary/vendor/etc/aoc/uplink_external_speaker_aec_off_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_external_speaker_aec_off_config.pb \
+    vendor/google/tangorpro/proprietary/vendor/etc/aoc/uplink_external_speaker_aec_on_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_external_speaker_aec_on_config.pb \
+    vendor/google/tangorpro/proprietary/vendor/etc/aoc/uplink_handset_aec_off_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_handset_aec_off_config.pb \
+    vendor/google/tangorpro/proprietary/vendor/etc/aoc/uplink_handset_aec_on_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_handset_aec_on_config.pb \
+    vendor/google/tangorpro/proprietary/vendor/etc/aoc/uplink_speaker_aec_off_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_speaker_aec_off_config.pb \
+    vendor/google/tangorpro/proprietary/vendor/etc/aoc/uplink_speaker_aec_on_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_speaker_aec_on_config.pb \
+    vendor/google/tangorpro/proprietary/vendor/etc/aoc/uplink_wired_headset_aec_off_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_wired_headset_aec_off_config.pb \
+    vendor/google/tangorpro/proprietary/vendor/etc/aoc/uplink_wired_headset_aec_on_config.pb:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/uplink_wired_headset_aec_on_config.pb \
     vendor/google/tangorpro/proprietary/vendor/etc/aoc/waveform_aec_graph.tflite:$(TARGET_COPY_OUT_VENDOR)/etc/aoc/waveform_aec_graph.tflite \
     vendor/google/tangorpro/proprietary/vendor/etc/atc_profile.json:$(TARGET_COPY_OUT_VENDOR)/etc/atc_profile.json \
+    vendor/google/tangorpro/proprietary/vendor/etc/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
+    vendor/google/tangorpro/proprietary/vendor/etc/audio_platform_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_configuration.xml \
+    vendor/google/tangorpro/proprietary/vendor/etc/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
+    vendor/google/tangorpro/proprietary/vendor/etc/audio_policy_configuration_a2dp_offload_disabled.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration_a2dp_offload_disabled.xml \
+    vendor/google/tangorpro/proprietary/vendor/etc/audio_policy_configuration_bluetooth_legacy_hal.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration_bluetooth_legacy_hal.xml \
+    vendor/google/tangorpro/proprietary/vendor/etc/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
+    vendor/google/tangorpro/proprietary/vendor/etc/bluetooth_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration_7_0.xml \
+    vendor/google/tangorpro/proprietary/vendor/etc/bluetooth_power_limits.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits.csv \
+    vendor/google/tangorpro/proprietary/vendor/etc/bluetooth_power_limits_GTU8P_CA.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_GTU8P_CA.csv \
+    vendor/google/tangorpro/proprietary/vendor/etc/bluetooth_power_limits_GTU8P_EU.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_GTU8P_EU.csv \
+    vendor/google/tangorpro/proprietary/vendor/etc/bluetooth_power_limits_GTU8P_JP.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_GTU8P_JP.csv \
+    vendor/google/tangorpro/proprietary/vendor/etc/bluetooth_power_limits_GTU8P_US.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_GTU8P_US.csv \
+    vendor/google/tangorpro/proprietary/vendor/etc/cert-chain.crt:$(TARGET_COPY_OUT_VENDOR)/etc/cert-chain.crt \
     vendor/google/tangorpro/proprietary/vendor/etc/chre/activity.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/activity.napp_header \
     vendor/google/tangorpro/proprietary/vendor/etc/chre/activity.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/activity.so \
     vendor/google/tangorpro/proprietary/vendor/etc/chre/ambient_volume.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/ambient_volume.napp_header \
@@ -119,20 +159,27 @@ PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/vendor/etc/chre/system_signal_hub.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/system_signal_hub.so \
     vendor/google/tangorpro/proprietary/vendor/etc/chre/uv_exposure.napp_header:$(TARGET_COPY_OUT_VENDOR)/etc/chre/uv_exposure.napp_header \
     vendor/google/tangorpro/proprietary/vendor/etc/chre/uv_exposure.so:$(TARGET_COPY_OUT_VENDOR)/etc/chre/uv_exposure.so \
+    vendor/google/tangorpro/proprietary/vendor/etc/display_colordata_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_colordata_cal0.pb \
+    vendor/google/tangorpro/proprietary/vendor/etc/display_golden_boe-ts110f5mlg0-rt4_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_golden_boe-ts110f5mlg0-rt4_cal0.pb \
+    vendor/google/tangorpro/proprietary/vendor/etc/display_golden_csot-ppa957db2d-rt4_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_golden_csot-ppa957db2d-rt4_cal0.pb \
     vendor/google/tangorpro/proprietary/vendor/etc/display_settings.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display_settings.xml \
     vendor/google/tangorpro/proprietary/vendor/etc/displayconfig/display_id_4619827677550801152.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4619827677550801152.xml \
+    vendor/google/tangorpro/proprietary/vendor/etc/fstab.persist:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.persist \
+    vendor/google/tangorpro/proprietary/vendor/etc/init.common.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/init.common.cfg \
     vendor/google/tangorpro/proprietary/vendor/etc/init/Exynos_C2.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/Exynos_C2.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.authsecret-service.citadel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.authsecret-service.citadel.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.bluetooth@1.1-service.synabtlinux.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.1-service.synabtlinux.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.camera.provider@2.7-service-google-apex.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.camera.provider@2.7-service-google-apex.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.contexthub-service.generic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.contexthub-service.generic.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.drm-service.castkey.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm-service.castkey.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.dumpstate-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.dumpstate-service.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.edgetpu.logging@service-edgetpu-logging.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.edgetpu.logging@service-edgetpu-logging.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.graphics.allocator2-aidl-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator2-aidl-service.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.gxp.logging@service-gxp-logging.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gxp.logging@service-gxp-logging.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.input.processor-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.input.processor-service.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.neuralnetworks@service-darwinn-aidl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks@service-darwinn-aidl.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.oemlock-service.citadel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.oemlock-service.citadel.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.power.stats-service.pixel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.power.stats-service.pixel.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.rlsservice-service-google-apex.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.rlsservice-service-google-apex.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.security.keymint-service.citadel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint-service.citadel.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.weaver-service.citadel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.weaver-service.citadel.rc \
@@ -142,16 +189,32 @@ PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/vendor/etc/init/com.google.edgetpu.tachyon-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/com.google.edgetpu.tachyon-service.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/fingerprint-fpc42.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fingerprint-fpc42.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/google.hardware.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/google.hardware.media.c2@1.0-service.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/hw/init.gs201.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.gs201.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/hw/init.gs201.storage.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.gs201.storage.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/hw/init.gs201.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.gs201.usb.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/hw/init.tangorpro.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.tangorpro.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/hwc3-pixel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hwc3-pixel.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/init.aoc.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.aoc.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/init.camera.set-interrupts-ownership.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.camera.set-interrupts-ownership.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/init.fingerprint.dump.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.fingerprint.dump.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/init.module.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.module.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/init.pixel-mm-gs.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.pixel-mm-gs.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/init.pixel-perf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.pixel-perf.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/init.sscoredump.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.sscoredump.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/init.storage.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.storage.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/init.touch.gti0.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.touch.gti0.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/init.touch.predump.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.touch.predump.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/init.usf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.usf.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/init_dauntless.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init_dauntless.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/libg3a_gabc.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/libg3a_gabc.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/libg3a_gaf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/libg3a_gaf.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/libg3a_ghawb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/libg3a_ghawb.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/memtrack.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/memtrack.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/pixelstats-vendor.gs201.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pixelstats-vendor.gs201.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/qorvo.uwb-calib.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qorvo.uwb-calib.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/qorvo.uwb-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qorvo.uwb-service.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/samsung.hardware.media.c2@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/samsung.hardware.media.c2@1.2-service.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/storage.gs201.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/storage.gs201.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/trusty_metricsd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/trusty_metricsd.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/twoshay.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/twoshay.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.media.c2@1.0-service.rc \
@@ -161,12 +224,34 @@ PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/vendor/etc/init/vendor.google.google_battery-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.google.google_battery-default.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/vendor.google.radioext@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.google.radioext@1.0-service.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/input_classifier_model.pb:$(TARGET_COPY_OUT_VENDOR)/etc/input_classifier_model.pb \
+    vendor/google/tangorpro/proprietary/vendor/etc/led_golden_calibration_LUT_black_CG.txt:$(TARGET_COPY_OUT_VENDOR)/etc/led_golden_calibration_LUT_black_CG.txt \
+    vendor/google/tangorpro/proprietary/vendor/etc/led_golden_calibration_LUT_white_CG.txt:$(TARGET_COPY_OUT_VENDOR)/etc/led_golden_calibration_LUT_white_CG.txt \
+    vendor/google/tangorpro/proprietary/vendor/etc/libg3a_standalone_gabc_rc:$(TARGET_COPY_OUT_VENDOR)/etc/libg3a_standalone_gabc_rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/libg3a_standalone_gaf_rc:$(TARGET_COPY_OUT_VENDOR)/etc/libg3a_standalone_gaf_rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/libg3a_standalone_ghawb_rc:$(TARGET_COPY_OUT_VENDOR)/etc/libg3a_standalone_ghawb_rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     vendor/google/tangorpro/proprietary/vendor/etc/media_codecs_aosp_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_aosp_c2.xml \
+    vendor/google/tangorpro/proprietary/vendor/etc/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
     vendor/google/tangorpro/proprietary/vendor/etc/media_codecs_dolby_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_c2.xml \
+    vendor/google/tangorpro/proprietary/vendor/etc/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
+    vendor/google/tangorpro/proprietary/vendor/etc/media_codecs_performance_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2.xml \
+    vendor/google/tangorpro/proprietary/vendor/etc/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
+    vendor/google/tangorpro/proprietary/vendor/etc/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
+    vendor/google/tangorpro/proprietary/vendor/etc/modem/Pixel_Default_metrics.xml:$(TARGET_COPY_OUT_VENDOR)/etc/modem/Pixel_Default_metrics.xml \
+    vendor/google/tangorpro/proprietary/vendor/etc/modem/Pixel_stability.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/modem/Pixel_stability.cfg \
+    vendor/google/tangorpro/proprietary/vendor/etc/modem/Pixel_stability.nprf:$(TARGET_COPY_OUT_VENDOR)/etc/modem/Pixel_stability.nprf \
+    vendor/google/tangorpro/proprietary/vendor/etc/modem/camera_front_mipi_coex_table.csv:$(TARGET_COPY_OUT_VENDOR)/etc/modem/camera_front_mipi_coex_table.csv \
+    vendor/google/tangorpro/proprietary/vendor/etc/modem/camera_rear_main_mipi_coex_table.csv:$(TARGET_COPY_OUT_VENDOR)/etc/modem/camera_rear_main_mipi_coex_table.csv \
+    vendor/google/tangorpro/proprietary/vendor/etc/modem/default.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/modem/default.cfg \
+    vendor/google/tangorpro/proprietary/vendor/etc/modem/default.nprf:$(TARGET_COPY_OUT_VENDOR)/etc/modem/default.nprf \
+    vendor/google/tangorpro/proprietary/vendor/etc/modem/default_metrics.xml:$(TARGET_COPY_OUT_VENDOR)/etc/modem/default_metrics.xml \
+    vendor/google/tangorpro/proprietary/vendor/etc/modem/logging.conf:$(TARGET_COPY_OUT_VENDOR)/etc/modem/logging.conf \
     vendor/google/tangorpro/proprietary/vendor/etc/modem_stat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/modem_stat.conf \
     vendor/google/tangorpro/proprietary/vendor/etc/permissions/android.hardware.strongbox_keystore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.strongbox_keystore.xml \
     vendor/google/tangorpro/proprietary/vendor/etc/permissions/com.google.android.camera.experimental2022.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.google.android.camera.experimental2022.xml \
+    vendor/google/tangorpro/proprietary/vendor/etc/permissions/vendor.android.hardware.camera.preview-dis.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor.android.hardware.camera.preview-dis.xml \
     vendor/google/tangorpro/proprietary/vendor/etc/pixelstats_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/pixelstats_config.json \
+    vendor/google/tangorpro/proprietary/vendor/etc/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json \
     vendor/google/tangorpro/proprietary/vendor/etc/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt \
     vendor/google/tangorpro/proprietary/vendor/etc/seccomp_policy/codec2.vendor.base.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.base.policy \
     vendor/google/tangorpro/proprietary/vendor/etc/seccomp_policy/codec2.vendor.ext.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.ext.policy \
@@ -176,15 +261,92 @@ PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/vendor/etc/sensors/registry/append/power.reg:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/registry/append/power.reg \
     vendor/google/tangorpro/proprietary/vendor/etc/sensors/registry/tangorpro_black.reg:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/registry/tangorpro_black.reg \
     vendor/google/tangorpro/proprietary/vendor/etc/sensors/registry/tangorpro_white.reg:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/registry/tangorpro_white.reg \
+    vendor/google/tangorpro/proprietary/vendor/etc/sound_trigger_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_configuration.xml \
+    vendor/google/tangorpro/proprietary/vendor/etc/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json \
+    vendor/google/tangorpro/proprietary/vendor/etc/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json \
+    vendor/google/tangorpro/proprietary/vendor/etc/thermal_info_config_charge.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_charge.json \
     vendor/google/tangorpro/proprietary/vendor/etc/touchflow.pb:$(TARGET_COPY_OUT_VENDOR)/etc/touchflow.pb \
     vendor/google/tangorpro/proprietary/vendor/etc/twoshay_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/twoshay_config.json \
+    vendor/google/tangorpro/proprietary/vendor/etc/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-am.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-am.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-at.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-at.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-az.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-az.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-be.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-be.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-bg.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-bg.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-by.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-by.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-ca.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-ca.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-ch.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-ch.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-cy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-cy.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-cz.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-cz.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-de.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-de.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-default.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-default.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-dk.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-dk.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-ee.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-ee.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-es.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-es.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-fi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-fi.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-fr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-fr.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-gb.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-gb.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-gr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-gr.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-hr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-hr.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-hu.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-hu.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-id.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-id.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-ie.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-ie.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-is.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-is.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-it.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-it.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-jp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-jp.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-kg.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-kg.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-kz.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-kz.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-li.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-li.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-lt.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-lt.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-lu.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-lu.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-lv.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-lv.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-mt.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-mt.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-ni.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-ni.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-nl.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-nl.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-no.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-no.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-np.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-np.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-pl.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-pl.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-pt.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-pt.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-ro.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-ro.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-ru.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-ru.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-se.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-se.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-si.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-si.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-sk.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-sk.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-tj.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-tj.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-tm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-tm.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-tw.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-tw.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-ua.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-ua.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-unknown.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-unknown.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-us.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-us.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-uz.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-uz.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration.conf \
     vendor/google/tangorpro/proprietary/vendor/etc/uwb/calib_paths:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/calib_paths \
     vendor/google/tangorpro/proprietary/vendor/etc/uwb/libuwb-uci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/libuwb-uci.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/waves_config.ini:$(TARGET_COPY_OUT_VENDOR)/etc/waves_config.ini \
+    vendor/google/tangorpro/proprietary/vendor/etc/waves_preset.mps:$(TARGET_COPY_OUT_VENDOR)/etc/waves_preset.mps \
+    vendor/google/tangorpro/proprietary/vendor/etc/wifi/coex_table.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/coex_table.xml \
+    vendor/google/tangorpro/proprietary/vendor/etc/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
+    vendor/google/tangorpro/proprietary/vendor/etc/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     vendor/google/tangorpro/proprietary/vendor/firmware/1540.app:$(TARGET_COPY_OUT_VENDOR)/firmware/1540.app \
+    vendor/google/tangorpro/proprietary/vendor/firmware/L2-cs35l41-dsp1-spk-cali.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/L2-cs35l41-dsp1-spk-cali.bin \
+    vendor/google/tangorpro/proprietary/vendor/firmware/L2-cs35l41-dsp1-spk-diag.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/L2-cs35l41-dsp1-spk-diag.bin \
+    vendor/google/tangorpro/proprietary/vendor/firmware/L2-cs35l41-dsp1-spk-prot.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/L2-cs35l41-dsp1-spk-prot.bin \
+    vendor/google/tangorpro/proprietary/vendor/firmware/R-cs35l41-dsp1-spk-cali.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/R-cs35l41-dsp1-spk-cali.bin \
+    vendor/google/tangorpro/proprietary/vendor/firmware/R-cs35l41-dsp1-spk-diag.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/R-cs35l41-dsp1-spk-diag.bin \
+    vendor/google/tangorpro/proprietary/vendor/firmware/R-cs35l41-dsp1-spk-prot.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/R-cs35l41-dsp1-spk-prot.bin \
+    vendor/google/tangorpro/proprietary/vendor/firmware/R2-cs35l41-dsp1-spk-cali.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/R2-cs35l41-dsp1-spk-cali.bin \
+    vendor/google/tangorpro/proprietary/vendor/firmware/R2-cs35l41-dsp1-spk-diag.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/R2-cs35l41-dsp1-spk-diag.bin \
+    vendor/google/tangorpro/proprietary/vendor/firmware/R2-cs35l41-dsp1-spk-prot.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/R2-cs35l41-dsp1-spk-prot.bin \
     vendor/google/tangorpro/proprietary/vendor/firmware/aoc.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/aoc.bin \
     vendor/google/tangorpro/proprietary/vendor/firmware/bcmdhd.cal:$(TARGET_COPY_OUT_VENDOR)/firmware/bcmdhd.cal \
     vendor/google/tangorpro/proprietary/vendor/firmware/bcmdhd_clm.blob:$(TARGET_COPY_OUT_VENDOR)/firmware/bcmdhd_clm.blob \
     vendor/google/tangorpro/proprietary/vendor/firmware/cast_auth.app:$(TARGET_COPY_OUT_VENDOR)/firmware/cast_auth.app \
+    vendor/google/tangorpro/proprietary/vendor/firmware/cs35l41-dsp1-spk-cali.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-cali.bin \
+    vendor/google/tangorpro/proprietary/vendor/firmware/cs35l41-dsp1-spk-cali.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-cali.wmfw \
+    vendor/google/tangorpro/proprietary/vendor/firmware/cs35l41-dsp1-spk-diag.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-diag.bin \
+    vendor/google/tangorpro/proprietary/vendor/firmware/cs35l41-dsp1-spk-diag.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-diag.wmfw \
+    vendor/google/tangorpro/proprietary/vendor/firmware/cs35l41-dsp1-spk-prot.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-prot.bin \
+    vendor/google/tangorpro/proprietary/vendor/firmware/cs35l41-dsp1-spk-prot.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l41-dsp1-spk-prot.wmfw \
     vendor/google/tangorpro/proprietary/vendor/firmware/dauntless/d3m2.ec.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/dauntless/d3m2.ec.bin \
     vendor/google/tangorpro/proprietary/vendor/firmware/dauntless/evt.ec.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/dauntless/evt.ec.bin \
     vendor/google/tangorpro/proprietary/vendor/firmware/dauntless/proto11.ec.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/dauntless/proto11.ec.bin \
@@ -211,9 +373,14 @@ PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/vendor/firmware/novatek_ts_fw_csot.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/novatek_ts_fw_csot.bin \
     vendor/google/tangorpro/proprietary/vendor/firmware/novatek_ts_mp.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/novatek_ts_mp.bin \
     vendor/google/tangorpro/proprietary/vendor/firmware/novatek_ts_mp_csot.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/novatek_ts_mp_csot.bin \
+    vendor/google/tangorpro/proprietary/vendor/firmware/readme_bottom.md:$(TARGET_COPY_OUT_VENDOR)/firmware/readme_bottom.md \
+    vendor/google/tangorpro/proprietary/vendor/firmware/readme_top.md:$(TARGET_COPY_OUT_VENDOR)/firmware/readme_top.md \
     vendor/google/tangorpro/proprietary/vendor/firmware/sarconfig.info:$(TARGET_COPY_OUT_VENDOR)/firmware/sarconfig.info \
     vendor/google/tangorpro/proprietary/vendor/firmware/syna/BTFW.hcd:$(TARGET_COPY_OUT_VENDOR)/firmware/syna/BTFW.hcd \
-    vendor/google/tangorpro/proprietary/vendor/firmware/syna/BTFW_B.hcd:$(TARGET_COPY_OUT_VENDOR)/firmware/syna/BTFW_B.hcd
+    vendor/google/tangorpro/proprietary/vendor/firmware/syna/BTFW_B.hcd:$(TARGET_COPY_OUT_VENDOR)/firmware/syna/BTFW_B.hcd \
+    vendor/google/tangorpro/proprietary/vendor/usr/idc/NVTCapacitivePen.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/NVTCapacitivePen.idc \
+    vendor/google/tangorpro/proprietary/vendor/usr/idc/NVTCapacitiveTouchScreen.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/NVTCapacitiveTouchScreen.idc \
+    vendor/google/tangorpro/proprietary/vendor/usr/idc/USI_Stylus.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/USI_Stylus.idc
 
 PRODUCT_PACKAGES += \
     aoc_aud_ext \
@@ -301,6 +468,8 @@ PRODUCT_PACKAGES += \
     vendor.google.whitechapel.audio.extension-V5-ndk \
     android.hardware.authsecret-impl.nos \
     android.hardware.oemlock-impl.nos \
+    android.hardware.power.stats-impl.gs-common \
+    android.hardware.power.stats-impl.gs201 \
     android.hardware.security.keymint-impl.nos \
     android.hardware.weaver-bridge.nos \
     android.hardware.weaver-impl.nos \
@@ -329,6 +498,7 @@ PRODUCT_PACKAGES += \
     libdeccfg \
     libdeeptouch \
     libdrmresource \
+    libdump \
     libedgetpu_tflite_compiler \
     libedgetpu_util \
     libexynosdisplay \
@@ -343,6 +513,10 @@ PRODUCT_PACKAGES += \
     libspeech_waveformaec_runner \
     libtachyon_core \
     libtouchflow \
+    modem_android_property_manager \
+    modem_android_property_manager_impl \
+    modem_log_constants \
+    modem_log_dumper \
     sideFpsSuez \
     vendor-pixelatoms-cpp \
     vendor.google.audiometricext@1.0 \
@@ -357,6 +531,7 @@ PRODUCT_PACKAGES += \
     android.hardware.authsecret-service.citadel.xml \
     android.hardware.camera.provider@2.7-service-google-apex.xml \
     android.hardware.contexthub-service.generic.xml \
+    android.hardware.dumpstate-service.xml \
     android.hardware.neuralnetworks@service-darwinn-aidl.xml \
     android.hardware.oemlock-service.citadel.xml \
     android.hardware.security.keymint-service.citadel.xml \
@@ -378,12 +553,30 @@ PRODUCT_PACKAGES += \
     vendor.google.google_battery-default.xml \
     aocd \
     aocxd \
+    dump_aoc \
+    dump_devfreq \
+    dump_exynos_display \
+    dump_fingerprint \
+    dump_gsc \
+    dump_modemlog \
+    dump_perf \
+    dump_pixel_metrics \
+    dump_power \
+    dump_sensors \
+    dump_soc \
+    dump_storage \
+    dump_thermal \
+    dump_touch \
+    dump_trusty \
+    dump_umfw_stat \
+    predump_gti0 \
     android.hardware.authsecret-service.citadel \
     android.hardware.biometrics.fingerprint-service.fpc42 \
     android.hardware.bluetooth@1.1-service.synabtlinux \
     android.hardware.composer.hwc3-service.pixel \
     android.hardware.contexthub-service.generic \
     android.hardware.drm-service.castkey \
+    android.hardware.dumpstate-service \
     android.hardware.edgetpu.logging@service-edgetpu-logging \
     android.hardware.graphics.allocator-V2-service \
     android.hardware.gxp.logging@service-gxp-logging \
@@ -391,6 +584,7 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack-service.pixel \
     android.hardware.neuralnetworks@service-darwinn-aidl \
     android.hardware.oemlock-service.citadel \
+    android.hardware.power.stats-service.pixel \
     android.hardware.qorvo.uwb.service \
     android.hardware.security.keymint-service.citadel \
     android.hardware.weaver-service.citadel \
@@ -398,6 +592,7 @@ PRODUCT_PACKAGES += \
     citadel_updater \
     citadeld \
     com.google.edgetpu.tachyon-service \
+    disable_contaminant_detection \
     google.hardware.media.c2@1.0-service \
     init_citadel \
     samsung.hardware.media.c2@1.2-service \
@@ -407,9 +602,15 @@ PRODUCT_PACKAGES += \
     vendor.google.google_battery-service \
     vendor.google.radioext@1.0-service \
     init.camera.set-interrupts-ownership \
+    init.display \
+    init.uwb.calib \
+    insmod \
     pixelstats-vendor \
+    predump_touch \
     sscoredump \
+    touch_gti_ical \
     trusty_metricsd \
     twoshay \
+    ufs_firmware_update \
     umfw_stat_tool \
     usf_stats
