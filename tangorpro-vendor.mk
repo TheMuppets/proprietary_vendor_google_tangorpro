@@ -17,7 +17,6 @@ PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/product/etc/permissions/com.google.android.apps.mediashell.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.apps.mediashell.xml \
     vendor/google/tangorpro/proprietary/product/etc/permissions/com.google.android.apps.nest.castauth.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.apps.nest.castauth.xml \
     vendor/google/tangorpro/proprietary/product/etc/permissions/com.google.android.apps.nest.dockmanager.app.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.apps.nest.dockmanager.app.xml \
-    vendor/google/tangorpro/proprietary/product/etc/permissions/com.google.android.hardwareinfo.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.hardwareinfo.xml \
     vendor/google/tangorpro/proprietary/product/etc/permissions/com.google.assistant.hubui.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.assistant.hubui.xml \
     vendor/google/tangorpro/proprietary/product/etc/permissions/com.google.pixel.camera.connectivity.impl.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.pixel.camera.connectivity.impl.xml \
     vendor/google/tangorpro/proprietary/product/etc/permissions/com.google.pixel.camera.services.cameraidremapper.impl.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.pixel.camera.services.cameraidremapper.impl.xml \
@@ -64,10 +63,9 @@ PRODUCT_PACKAGES += \
     libhbmsvmanager_jni \
     AndroidMediaShell \
     CastAuthPrebuilt \
-    DeviceIntelligenceNetworkPrebuilt-bfinal_astrea_20250217.00_RC00 \
-    DevicePersonalizationPrebuiltPixelTablet2023-bfinal_aiai_20250217.00_RC08 \
+    DeviceIntelligenceNetworkPrebuilt-astrea_20240329.00_RC02 \
+    DevicePersonalizationPrebuiltPixelTablet2023-playstore_aiai_20250306.00_RC10 \
     DockManagerPrebuilt \
-    HardwareInfo \
     HomegraphPrebuilt \
     HotwordEnrollmentOKGoogleFUSIONPro \
     HotwordEnrollmentXGoogleFUSIONPro \
@@ -88,6 +86,8 @@ PRODUCT_PACKAGES += \
     com.google.pixel.camera.services.cameraidremapper \
     com.google.pixel.camera.services.lyricconfigprovider \
     google-ril \
+    aocx_framework_compatibility_matrix_system_ext \
+    imageprocessing_hal_framework_compatibility_matrix_system_ext \
     com.google.pixel.camera.services@1.0-service-google.xml \
     vendor.google.edgetpu_app_service@1.0-service.xml \
     gs_watchdogd \
@@ -172,7 +172,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.camera.provider@2.7-service-google-apex.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.camera.provider@2.7-service-google-apex.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.contexthub-service.generic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.contexthub-service.generic.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.drm-service.castkey.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm-service.castkey.rc \
-    vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.dumpstate-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.dumpstate-service.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.dumpstate.3-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.dumpstate.3-service.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.edgetpu.logging@service-edgetpu-logging.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.edgetpu.logging@service-edgetpu-logging.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.graphics.allocator2-aidl-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator2-aidl-service.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.gxp.logging@service-gxp-logging.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gxp.logging@service-gxp-logging.rc \
@@ -249,6 +249,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/vendor/etc/modem_stat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/modem_stat.conf \
     vendor/google/tangorpro/proprietary/vendor/etc/permissions/android.hardware.strongbox_keystore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.strongbox_keystore.xml \
     vendor/google/tangorpro/proprietary/vendor/etc/permissions/com.google.android.camera.experimental2022.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.google.android.camera.experimental2022.xml \
+    vendor/google/tangorpro/proprietary/vendor/etc/permissions/com.google.android.hardwareinfo.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.google.android.hardwareinfo.xml \
     vendor/google/tangorpro/proprietary/vendor/etc/permissions/vendor.android.hardware.camera.preview-dis.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor.android.hardware.camera.preview-dis.xml \
     vendor/google/tangorpro/proprietary/vendor/etc/pixelstats_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/pixelstats_config.json \
     vendor/google/tangorpro/proprietary/vendor/etc/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json \
@@ -368,6 +369,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/vendor/firmware/mali_csffw-r52p0.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mali_csffw-r52p0.bin \
     vendor/google/tangorpro/proprietary/vendor/firmware/mali_csffw-r53p0.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mali_csffw-r53p0.bin \
     vendor/google/tangorpro/proprietary/vendor/firmware/mali_csffw-r54p0.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mali_csffw-r54p0.bin \
+    vendor/google/tangorpro/proprietary/vendor/firmware/mali_csffw-r54p1.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mali_csffw-r54p1.bin \
     vendor/google/tangorpro/proprietary/vendor/firmware/mfc_fw.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mfc_fw.bin \
     vendor/google/tangorpro/proprietary/vendor/firmware/novatek_ts_fw.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/novatek_ts_fw.bin \
     vendor/google/tangorpro/proprietary/vendor/firmware/novatek_ts_fw_csot.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/novatek_ts_fw_csot.bin \
@@ -491,6 +493,8 @@ PRODUCT_PACKAGES += \
     fingerprint.fpc \
     libExynosHWCService \
     lib_reader \
+    lib_vendor_gsc_atoms \
+    libalertv3 \
     libcodec2_soft_ddpdec \
     libcodec2_store_dolby \
     libdapparamstorage \
@@ -521,17 +525,18 @@ PRODUCT_PACKAGES += \
     vendor-pixelatoms-cpp \
     vendor.google.audiometricext@1.0 \
     vendor.google.bluetooth_ext-V1-ndk \
-    vendor.google.google_battery-V4-ndk \
+    vendor.google.google_battery-V5-ndk \
     vendor_chre_atoms_log \
     vendor_chre_metrics-cpp \
     com.google.android.widevine-13130248 \
     com.google.pixel.camera.hal \
     com.google.pixel.wifi.ext \
+    HardwareInfo \
     com.google.android.camera.experimental2022 \
     android.hardware.authsecret-service.citadel.xml \
     android.hardware.camera.provider@2.7-service-google-apex.xml \
     android.hardware.contexthub-service.generic.xml \
-    android.hardware.dumpstate-service.xml \
+    android.hardware.dumpstate.3-service.xml \
     android.hardware.neuralnetworks@service-darwinn-aidl.xml \
     android.hardware.oemlock-service.citadel.xml \
     android.hardware.security.keymint-service.citadel.xml \
@@ -576,7 +581,7 @@ PRODUCT_PACKAGES += \
     android.hardware.composer.hwc3-service.pixel \
     android.hardware.contexthub-service.generic \
     android.hardware.drm-service.castkey \
-    android.hardware.dumpstate-service \
+    android.hardware.dumpstate.3-service \
     android.hardware.edgetpu.logging@service-edgetpu-logging \
     android.hardware.graphics.allocator-V2-service \
     android.hardware.gxp.logging@service-gxp-logging \
