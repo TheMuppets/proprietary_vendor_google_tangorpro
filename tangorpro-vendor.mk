@@ -9,6 +9,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/product/etc/ambient/matcher_tah.leveldb:$(TARGET_COPY_OUT_PRODUCT)/etc/ambient/matcher_tah.leveldb \
     vendor/google/tangorpro/proprietary/product/etc/appcompat/compat_framework_overrides.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/appcompat/compat_framework_overrides.xml \
     vendor/google/tangorpro/proprietary/product/etc/default-permissions/default-permissions_SmartDisplayPrebuilt.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/default-permissions/default-permissions_SmartDisplayPrebuilt.xml \
+    vendor/google/tangorpro/proprietary/product/etc/default-permissions/default-permissions_nowplaying.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/default-permissions/default-permissions_nowplaying.xml \
     vendor/google/tangorpro/proprietary/product/etc/firmware/music_detector.descriptor:$(TARGET_COPY_OUT_PRODUCT)/etc/firmware/music_detector.descriptor \
     vendor/google/tangorpro/proprietary/product/etc/firmware/music_detector.sound_model:$(TARGET_COPY_OUT_PRODUCT)/etc/firmware/music_detector.sound_model \
     vendor/google/tangorpro/proprietary/product/etc/firmware/music_detector.sound_model_2:$(TARGET_COPY_OUT_PRODUCT)/etc/firmware/music_detector.sound_model_2 \
@@ -28,6 +29,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/product/etc/sysconfig/google-nest-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/google-nest-hiddenapi-package-whitelist.xml \
     vendor/google/tangorpro/proprietary/product/etc/sysconfig/kids_home_experience.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/kids_home_experience.xml \
     vendor/google/tangorpro/proprietary/product/etc/sysconfig/nexus.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/nexus.xml \
+    vendor/google/tangorpro/proprietary/product/etc/sysconfig/nowplaying_app_26q1.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/nowplaying_app_26q1.xml \
     vendor/google/tangorpro/proprietary/product/etc/sysconfig/pixel_docking_experience_2022.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_docking_experience_2022.xml \
     vendor/google/tangorpro/proprietary/product/etc/sysconfig/pixel_experience_2017.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2017.xml \
     vendor/google/tangorpro/proprietary/product/etc/sysconfig/pixel_experience_2018.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2018.xml \
@@ -39,11 +41,20 @@ PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/product/etc/sysconfig/pixel_experience_2021_midyear.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2021_midyear.xml \
     vendor/google/tangorpro/proprietary/product/etc/sysconfig/pixel_experience_2022.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2022.xml \
     vendor/google/tangorpro/proprietary/product/etc/sysconfig/pixel_experience_2022_midyear.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2022_midyear.xml \
+    vendor/google/tangorpro/proprietary/product/etc/sysconfig/pixel_tablet-initial-package-stopped-states.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_tablet-initial-package-stopped-states.xml \
     vendor/google/tangorpro/proprietary/product/etc/sysconfig/pixel_tablet_experience_2023.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_tablet_experience_2023.xml \
+    vendor/google/tangorpro/proprietary/product/etc/sysconfig/preinstalled-packages-camera-services-base.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preinstalled-packages-camera-services-base.xml \
+    vendor/google/tangorpro/proprietary/product/etc/sysconfig/preinstalled-packages-camera-services-common.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preinstalled-packages-camera-services-common.xml \
+    vendor/google/tangorpro/proprietary/product/etc/sysconfig/preinstalled-packages-pixel-tablet-2023-and-newer.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preinstalled-packages-pixel-tablet-2023-and-newer.xml \
+    vendor/google/tangorpro/proprietary/product/etc/sysconfig/preinstalled-packages-product-gs201-device.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preinstalled-packages-product-gs201-device.xml \
+    vendor/google/tangorpro/proprietary/product/etc/sysconfig/preinstalled-packages-tangor-common.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preinstalled-packages-tangor-common.xml \
+    vendor/google/tangorpro/proprietary/product/etc/sysconfig/preinstalled_packages_pixel_experience_2021_and_newer.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preinstalled_packages_pixel_experience_2021_and_newer.xml \
     vendor/google/tangorpro/proprietary/recovery/root/vendor/firmware/novatek_ts_fw.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/novatek_ts_fw.bin \
     vendor/google/tangorpro/proprietary/recovery/root/vendor/firmware/novatek_ts_fw_csot.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/novatek_ts_fw_csot.bin \
     vendor/google/tangorpro/proprietary/recovery/root/vendor/firmware/novatek_ts_mp.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/novatek_ts_mp.bin \
     vendor/google/tangorpro/proprietary/recovery/root/vendor/firmware/novatek_ts_mp_csot.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/novatek_ts_mp_csot.bin \
+    vendor/google/tangorpro/proprietary/recovery/system/etc/init/android.hardware.boot-service.default_recovery-pixel.rc:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/init/android.hardware.boot-service.default_recovery-pixel.rc \
+    vendor/google/tangorpro/proprietary/recovery/system/etc/init/android.hardware.health-service.gs201_recovery.rc:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/init/android.hardware.health-service.gs201_recovery.rc \
     vendor/google/tangorpro/proprietary/system_ext/etc/init/init.gs_watchdogd.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.gs_watchdogd.rc \
     vendor/google/tangorpro/proprietary/system_ext/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/vendor.google.edgetpu_app_service@1.0-service.rc \
     vendor/google/tangorpro/proprietary/system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.hotwordenrollment.common.util.xml \
@@ -55,16 +66,20 @@ PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/system_ext/etc/permissions/google-ril.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/google-ril.xml \
     vendor/google/tangorpro/proprietary/system_ext/etc/permissions/privapp-permissions-google-se-lineage.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-google-se-lineage.xml \
     vendor/google/tangorpro/proprietary/system_ext/etc/permissions/privapp-permissions-qorvo.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-qorvo.xml \
-    vendor/google/tangorpro/proprietary/system_ext/etc/public.libraries-google.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries-google.txt
+    vendor/google/tangorpro/proprietary/system_ext/etc/public.libraries-google.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries-google.txt \
+    vendor/google/tangorpro/proprietary/system_ext/etc/sysconfig/preinstalled-packages-gril.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/preinstalled-packages-gril.xml \
+    vendor/google/tangorpro/proprietary/system_ext/etc/sysconfig/preinstalled-packages-hotword-google-fusion-pro.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/preinstalled-packages-hotword-google-fusion-pro.xml \
+    vendor/google/tangorpro/proprietary/system_ext/etc/sysconfig/preinstalled_packages_connectivity_thermal_power_manager.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/preinstalled_packages_connectivity_thermal_power_manager.xml
 
 PRODUCT_PACKAGES += \
     com.google.edgetpu_app_service-V3-ndk \
     com.google.edgetpu_vendor_service-V2-ndk \
     libhbmsvmanager_jni \
+    NowPlayingPrebuilt \
     AndroidMediaShell \
     CastAuthPrebuilt \
-    DeviceIntelligenceNetworkPrebuilt-astrea_20240329.00_RC02 \
-    DevicePersonalizationPrebuiltPixelTablet2023-playstore_aiai_20250306.00_RC10 \
+    DeviceIntelligenceNetworkPrebuiltAstrea \
+    DevicePersonalizationAiAiPrebuiltPixelTablet2023 \
     DockManagerPrebuilt \
     HomegraphPrebuilt \
     HotwordEnrollmentOKGoogleFUSIONPro \
@@ -87,11 +102,16 @@ PRODUCT_PACKAGES += \
     com.google.pixel.camera.services.lyricconfigprovider \
     google-ril \
     aocx_framework_compatibility_matrix_system_ext \
+    camera_interference_avoidance_framework_compatibility_matrix_system_ext \
     imageprocessing_hal_framework_compatibility_matrix_system_ext \
     com.google.pixel.camera.services@1.0-service-google.xml \
     vendor.google.edgetpu_app_service@1.0-service.xml \
+    android.hardware.boot-service.default_recovery-pixel.xml \
+    android.hardware.health-service.gs201_recovery.xml \
     gs_watchdogd \
-    vendor.google.edgetpu_app_service@1.0-service
+    vendor.google.edgetpu_app_service@1.0-service \
+    android.hardware.boot-service.default_recovery-pixel \
+    android.hardware.health-service.gs201_recovery
 
 PRODUCT_PACKAGES += \
     system_ext_priv-app_HbmSVManager_lib_arm64_libhbmsvmanager_jni_so
@@ -164,11 +184,13 @@ PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/vendor/etc/display_golden_csot-ppa957db2d-rt4_cal0.pb:$(TARGET_COPY_OUT_VENDOR)/etc/display_golden_csot-ppa957db2d-rt4_cal0.pb \
     vendor/google/tangorpro/proprietary/vendor/etc/display_settings.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display_settings.xml \
     vendor/google/tangorpro/proprietary/vendor/etc/displayconfig/display_id_4619827677550801152.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4619827677550801152.xml \
+    vendor/google/tangorpro/proprietary/vendor/etc/edgetpu/custom_kernel.pbtxt:$(TARGET_COPY_OUT_VENDOR)/etc/edgetpu/custom_kernel.pbtxt \
     vendor/google/tangorpro/proprietary/vendor/etc/fstab.persist:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.persist \
     vendor/google/tangorpro/proprietary/vendor/etc/init.common.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/init.common.cfg \
     vendor/google/tangorpro/proprietary/vendor/etc/init/Exynos_C2.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/Exynos_C2.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.authsecret-service.citadel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.authsecret-service.citadel.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.bluetooth@1.1-service.synabtlinux.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.1-service.synabtlinux.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.boot-service.default-pixel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.boot-service.default-pixel.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.camera.provider@2.7-service-google-apex.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.camera.provider@2.7-service-google-apex.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.contexthub-service.generic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.contexthub-service.generic.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.drm-service.castkey.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm-service.castkey.rc \
@@ -176,19 +198,26 @@ PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.edgetpu.logging@service-edgetpu-logging.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.edgetpu.logging@service-edgetpu-logging.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.graphics.allocator2-aidl-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator2-aidl-service.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.gxp.logging@service-gxp-logging.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gxp.logging@service-gxp-logging.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.health-service.gs201.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.health-service.gs201.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.input.processor-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.input.processor-service.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.neuralnetworks@service-darwinn-aidl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks@service-darwinn-aidl.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.oemlock-service.citadel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.oemlock-service.citadel.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.power-service.pixel-libperfmgr.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.power-service.pixel-libperfmgr.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.power.stats-service.pixel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.power.stats-service.pixel.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.rlsservice-service-google-apex.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.rlsservice-service-google-apex.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.security.keymint-service.citadel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint-service.citadel.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.thermal-service.pixel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.thermal-service.pixel.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.usb-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.usb-service.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.usb.gadget-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.usb.gadget-service.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/android.hardware.weaver-service.citadel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.weaver-service.citadel.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/aocd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/aocd.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/aocxd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/aocxd.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/citadeld.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/citadeld.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/com.google.edgetpu.tachyon-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/com.google.edgetpu.tachyon-service.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/dump_power.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dump_power.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/fingerprint-fpc42.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fingerprint-fpc42.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/google.hardware.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/google.hardware.media.c2@1.0-service.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/gpuflag.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/gpuflag.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/hw/init.gs201.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.gs201.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/hw/init.gs201.storage.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.gs201.storage.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/hw/init.gs201.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.gs201.usb.rc \
@@ -203,21 +232,26 @@ PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/vendor/etc/init/init.sscoredump.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.sscoredump.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/init.storage.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.storage.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/init.touch.gti0.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.touch.gti0.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/init.touch.ical0.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.touch.ical0.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/init.touch.predump.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.touch.predump.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/init.usboffmode.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.usboffmode.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/init.usf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.usf.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/init.watermark-scale-factor.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.watermark-scale-factor.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/init_dauntless.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init_dauntless.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/libg3a_gabc.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/libg3a_gabc.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/libg3a_gaf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/libg3a_gaf.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/libg3a_ghawb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/libg3a_ghawb.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/memtrack.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/memtrack.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/pixel-thermal-symlinks.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pixel-thermal-symlinks.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/pixelstats-vendor.gs201.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/pixelstats-vendor.gs201.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/qorvo.uwb-calib.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qorvo.uwb-calib.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/qorvo.uwb-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qorvo.uwb-service.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/samsung.hardware.media.c2@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/samsung.hardware.media.c2@1.2-service.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/storage.gs201.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/storage.gs201.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/storage.init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/storage.init.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/trusty_metricsd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/trusty_metricsd.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/twoshay.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/twoshay.rc \
-    vendor/google/tangorpro/proprietary/vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.media.c2@1.0-service.rc \
+    vendor/google/tangorpro/proprietary/vendor/etc/init/vendor.dolby.media.c2-default-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.media.c2-default-service.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/vendor.google.audiometricext@1.0-service-vendor.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.google.audiometricext@1.0-service-vendor.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/vendor.google.battery_mitigation-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.google.battery_mitigation-default.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/init/vendor.google.edgetpu_vendor_service@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.google.edgetpu_vendor_service@1.0-service.rc \
@@ -236,6 +270,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/vendor/etc/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
     vendor/google/tangorpro/proprietary/vendor/etc/media_codecs_performance_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_c2.xml \
     vendor/google/tangorpro/proprietary/vendor/etc/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
+    vendor/google/tangorpro/proprietary/vendor/etc/memory-limiter-config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/memory-limiter-config.xml \
     vendor/google/tangorpro/proprietary/vendor/etc/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
     vendor/google/tangorpro/proprietary/vendor/etc/modem/Pixel_Default_metrics.xml:$(TARGET_COPY_OUT_VENDOR)/etc/modem/Pixel_Default_metrics.xml \
     vendor/google/tangorpro/proprietary/vendor/etc/modem/Pixel_stability.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/modem/Pixel_stability.cfg \
@@ -247,7 +282,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/vendor/etc/modem/default_metrics.xml:$(TARGET_COPY_OUT_VENDOR)/etc/modem/default_metrics.xml \
     vendor/google/tangorpro/proprietary/vendor/etc/modem/logging.conf:$(TARGET_COPY_OUT_VENDOR)/etc/modem/logging.conf \
     vendor/google/tangorpro/proprietary/vendor/etc/modem_stat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/modem_stat.conf \
-    vendor/google/tangorpro/proprietary/vendor/etc/permissions/android.hardware.strongbox_keystore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.strongbox_keystore.xml \
+    vendor/google/tangorpro/proprietary/vendor/etc/permissions/android.hardware.strongbox_keystore_v3.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.strongbox_keystore_v3.xml \
     vendor/google/tangorpro/proprietary/vendor/etc/permissions/com.google.android.camera.experimental2022.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.google.android.camera.experimental2022.xml \
     vendor/google/tangorpro/proprietary/vendor/etc/permissions/com.google.android.hardwareinfo.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.google.android.hardwareinfo.xml \
     vendor/google/tangorpro/proprietary/vendor/etc/permissions/vendor.android.hardware.camera.preview-dis.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor.android.hardware.camera.preview-dis.xml \
@@ -267,6 +302,7 @@ PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/vendor/etc/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json \
     vendor/google/tangorpro/proprietary/vendor/etc/thermal_info_config_charge.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_charge.json \
     vendor/google/tangorpro/proprietary/vendor/etc/touchflow.pb:$(TARGET_COPY_OUT_VENDOR)/etc/touchflow.pb \
+    vendor/google/tangorpro/proprietary/vendor/etc/tracing_descriptors.gz:$(TARGET_COPY_OUT_VENDOR)/etc/tracing_descriptors.gz \
     vendor/google/tangorpro/proprietary/vendor/etc/twoshay_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/twoshay_config.json \
     vendor/google/tangorpro/proprietary/vendor/etc/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc \
     vendor/google/tangorpro/proprietary/vendor/etc/uwb/UWB-calibration-am.conf:$(TARGET_COPY_OUT_VENDOR)/etc/uwb/UWB-calibration-am.conf \
@@ -366,10 +402,11 @@ PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/vendor/firmware/gxp_fw_core2:$(TARGET_COPY_OUT_VENDOR)/firmware/gxp_fw_core2 \
     vendor/google/tangorpro/proprietary/vendor/firmware/gxp_fw_core3:$(TARGET_COPY_OUT_VENDOR)/firmware/gxp_fw_core3 \
     vendor/google/tangorpro/proprietary/vendor/firmware/logstrs.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/logstrs.bin \
-    vendor/google/tangorpro/proprietary/vendor/firmware/mali_csffw-r52p0.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mali_csffw-r52p0.bin \
-    vendor/google/tangorpro/proprietary/vendor/firmware/mali_csffw-r53p0.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mali_csffw-r53p0.bin \
+    vendor/google/tangorpro/proprietary/vendor/firmware/mali_csffw-legacy-r56p0.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mali_csffw-legacy-r56p0.bin \
     vendor/google/tangorpro/proprietary/vendor/firmware/mali_csffw-r54p0.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mali_csffw-r54p0.bin \
     vendor/google/tangorpro/proprietary/vendor/firmware/mali_csffw-r54p1.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mali_csffw-r54p1.bin \
+    vendor/google/tangorpro/proprietary/vendor/firmware/mali_csffw-r54p2.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mali_csffw-r54p2.bin \
+    vendor/google/tangorpro/proprietary/vendor/firmware/mali_csffw-r54p3.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mali_csffw-r54p3.bin \
     vendor/google/tangorpro/proprietary/vendor/firmware/mfc_fw.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mfc_fw.bin \
     vendor/google/tangorpro/proprietary/vendor/firmware/novatek_ts_fw.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/novatek_ts_fw.bin \
     vendor/google/tangorpro/proprietary/vendor/firmware/novatek_ts_fw_csot.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/novatek_ts_fw_csot.bin \
@@ -385,9 +422,10 @@ PRODUCT_COPY_FILES += \
     vendor/google/tangorpro/proprietary/vendor/usr/idc/USI_Stylus.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/USI_Stylus.idc
 
 PRODUCT_PACKAGES += \
+    aconfig_gpu_flags_c_lib \
     aoc_aud_ext \
     aoc_audio_stereo_spatializer \
-    aocx-V2-ndk \
+    aocx-V3-ndk \
     arm.graphics-V1-ndk \
     audio_adapted_info_features \
     audio_amcs_ext \
@@ -468,10 +506,12 @@ PRODUCT_PACKAGES += \
     vendor.google.battery_mitigation.service_static \
     vendor.google.whitechapel.audio.audioext@4.0 \
     vendor.google.whitechapel.audio.extension-V5-ndk \
+    aconfig_gsc_flags_c_lib \
     android.hardware.authsecret-impl.nos \
     android.hardware.oemlock-impl.nos \
     android.hardware.power.stats-impl.gs-common \
     android.hardware.power.stats-impl.gs201 \
+    android.hardware.power.stats-impl.pixel \
     android.hardware.security.keymint-impl.nos \
     android.hardware.weaver-bridge.nos \
     android.hardware.weaver-impl.nos \
@@ -484,7 +524,7 @@ PRODUCT_PACKAGES += \
     com.google.hardware.biometrics.parcelable.fingerprint.PressToAuthParcelable-V1-ndk \
     com.google.hardware.biometrics.sidefps.fingerprint-ext-V1-ndk \
     com.google.input-V2-ndk \
-    com.google.input-V6-ndk \
+    com.google.input-V8-ndk \
     fake_gxp_telemetry_reader \
     fpc42_suez \
     fpc_util \
@@ -497,21 +537,25 @@ PRODUCT_PACKAGES += \
     libalertv3 \
     libcodec2_soft_ddpdec \
     libcodec2_store_dolby \
-    libdapparamstorage \
     libdarwinn_hal \
-    libdeccfg \
     libdeeptouch \
+    libdisppower-pixel \
     libdrmresource \
     libdump \
     libedgetpu_tflite_compiler \
     libedgetpu_util \
     libexynosdisplay \
+    libgpuflag_aconfig_rust \
     libgril_oem-google \
     libgxp \
     libmemtrack-pixel \
     libnos_citadeld_proxy \
     liboemcrypto \
+    libperfmgr \
+    libpixelatoms_defs \
+    libpixelhealth \
     libpixelstats \
+    libpixelstatsflags \
     libsit_oem \
     libsit_oem_proto \
     libspeech_waveformaec_runner \
@@ -521,29 +565,39 @@ PRODUCT_PACKAGES += \
     modem_android_property_manager_impl \
     modem_log_constants \
     modem_log_dumper \
+    pixel_stateresidency_provider_aidl_interface-ndk \
+    pixelatoms-cpp \
+    pixelstats_flags_c_lib \
     sideFpsSuez \
+    thermal-budget-interface-ndk \
     vendor-pixelatoms-cpp \
     vendor.google.audiometricext@1.0 \
     vendor.google.bluetooth_ext-V1-ndk \
     vendor.google.google_battery-V5-ndk \
     vendor_chre_atoms_log \
     vendor_chre_metrics-cpp \
-    com.google.android.widevine-13130248 \
+    com.google.android.widevine-15027108-cp2a \
     com.google.pixel.camera.hal \
     com.google.pixel.wifi.ext \
     HardwareInfo \
     com.google.android.camera.experimental2022 \
     android.hardware.authsecret-service.citadel.xml \
-    android.hardware.camera.provider@2.7-service-google-apex.xml \
     android.hardware.contexthub-service.generic.xml \
     android.hardware.dumpstate.3-service.xml \
+    android.hardware.health-service.gs201.xml \
     android.hardware.neuralnetworks@service-darwinn-aidl.xml \
     android.hardware.oemlock-service.citadel.xml \
-    android.hardware.security.keymint-service.citadel.xml \
+    android.hardware.power-service.pixel.xml \
+    android.hardware.power.stats-service.pixel.xml \
+    android.hardware.security.keymint-service-v3.citadel.xml \
+    android.hardware.security.sharesecret-service.citadel.xml \
+    android.hardware.thermal-service.pixel.xml \
+    android.hardware.usb-service.xml \
+    android.hardware.usb.gadget-service.xml \
     android.hardware.weaver-service.citadel.xml \
     fingerprint-fpc42.xml \
     hwc3-default.xml \
-    manifest.xml \
+    manifest_mapper_framework.xml \
     manifest_android.hardware.drm-service.castkey.xml \
     manifest_aocx.xml \
     manifest_gralloc_aidl2.xml \
@@ -552,7 +606,7 @@ PRODUCT_PACKAGES += \
     memtrack.xml \
     pixel-display-default.xml \
     qorvo.uwb-service.xml \
-    vendor.dolby.media.c2@1.0-service.xml \
+    vendor.dolby.media.c2-default-service.xml \
     vendor.google.battery_mitigation-default.xml \
     vendor.google.edgetpu_vendor_service@1.0-service.xml \
     vendor.google.google_battery-default.xml \
@@ -563,6 +617,7 @@ PRODUCT_PACKAGES += \
     dump_exynos_display \
     dump_fingerprint \
     dump_gsc \
+    dump_modem \
     dump_modemlog \
     dump_perf \
     dump_pixel_metrics \
@@ -575,9 +630,11 @@ PRODUCT_PACKAGES += \
     dump_trusty \
     dump_umfw_stat \
     predump_gti0 \
+    gpuflag \
     android.hardware.authsecret-service.citadel \
     android.hardware.biometrics.fingerprint-service.fpc42 \
     android.hardware.bluetooth@1.1-service.synabtlinux \
+    android.hardware.boot-service.default-pixel \
     android.hardware.composer.hwc3-service.pixel \
     android.hardware.contexthub-service.generic \
     android.hardware.drm-service.castkey \
@@ -585,15 +642,21 @@ PRODUCT_PACKAGES += \
     android.hardware.edgetpu.logging@service-edgetpu-logging \
     android.hardware.graphics.allocator-V2-service \
     android.hardware.gxp.logging@service-gxp-logging \
+    android.hardware.health-service.gs201 \
     android.hardware.input.processor-service \
     android.hardware.memtrack-service.pixel \
     android.hardware.neuralnetworks@service-darwinn-aidl \
     android.hardware.oemlock-service.citadel \
+    android.hardware.power-service.pixel-libperfmgr \
     android.hardware.power.stats-service.pixel \
     android.hardware.qorvo.uwb.service \
     android.hardware.security.keymint-service.citadel \
+    android.hardware.thermal-service.pixel \
+    android.hardware.usb-service \
+    android.hardware.usb.gadget-service \
     android.hardware.weaver-service.citadel \
     battery_mitigation \
+    block_queue_depth \
     citadel_updater \
     citadeld \
     com.google.edgetpu.tachyon-service \
@@ -601,7 +664,8 @@ PRODUCT_PACKAGES += \
     google.hardware.media.c2@1.0-service \
     init_citadel \
     samsung.hardware.media.c2@1.2-service \
-    vendor.dolby.media.c2@1.0-service \
+    usboffmode \
+    vendor.dolby.media.c2-default-service \
     vendor.google.audiometricext@1.0-service-vendor \
     vendor.google.edgetpu_vendor_service@1.0-service \
     vendor.google.google_battery-service \
@@ -612,7 +676,10 @@ PRODUCT_PACKAGES += \
     insmod \
     pixelstats-vendor \
     predump_touch \
+    sendhint \
     sscoredump \
+    storage_init \
+    thermal_symlinks \
     touch_gti_ical \
     trusty_metricsd \
     twoshay \
